@@ -6,9 +6,13 @@ import Button from '@mui/material/Button'
 function App() {
   return (
     <>
-      <main>
+      <main className='App-header'>
         <About />
-        <Button>
+        <Button
+        onClick={() => alert('Fuck You')} 
+        variant='contained' 
+        color='secondary'
+        size='large'>
           Meet Me, Bro!
         </Button>
       </main>
