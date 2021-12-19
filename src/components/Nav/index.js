@@ -28,21 +28,6 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   }));
-
-  const categories = [
-            {
-                name: "front-end",
-                description: "Full stack web projects featuring simple, elegant designs"
-            },
-            {
-                name: "back-end",
-                description: "CLI applications geared towards functionality for CMS projects"
-            },
-            {
-                name: "radio",
-                description: "Samples of my weekly sports radio show in Portland, OR"
-            }
-        ]
   
   function Navbar() {
     const classes = useStyles();
@@ -63,9 +48,6 @@ const useStyles = makeStyles((theme) => ({
               </Link>
               <Link to="/contact" className={classes.link}>
                 Contact
-              </Link>
-              <Link to="/faq" className={classes.link}>
-                FAQ
               </Link>
             </div>
         </Toolbar>
