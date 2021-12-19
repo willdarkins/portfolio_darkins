@@ -1,4 +1,6 @@
 import React from 'react'
+//helper function to capitalize the name value when it's rendered
+import { capitalizeFirstLetter } from '../../utils/helpers'
 
 function Projects(props) {
     const currentCategory = {
@@ -7,7 +9,7 @@ function Projects(props) {
     }
     return (
         <section>
-            <h1>{currentCategory.name}</h1>
+            <h1>{capitalizeFirstLetter(currentCategory.name)}</h1>
             <p>{currentCategory.description}</p>
         </section>
     )
