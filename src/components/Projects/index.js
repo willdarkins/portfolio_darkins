@@ -1,7 +1,7 @@
 import React from 'react'
 //helper function to capitalize the name value when it's rendered
 import { capitalizeFirstLetter } from '../../utils/helpers'
-import logo from '../../assets/GIFS/tech-blog.gif';
+import logo from '../../assets/GIFS/employee-tracker.gif';
 
 function Projects(props) {
     const currentCategory = {
