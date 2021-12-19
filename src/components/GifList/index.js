@@ -1,3 +1,4 @@
+import { imageListClasses } from '@mui/material';
 import React, {useState} from 'react'
 import gif from '../../assets/GIFS/tech-blog.gif'
 
@@ -36,7 +37,14 @@ function GifList() {
       ]);
     return (
         <>
-        <img src={gif} alt='GIF example' />
+        <div className='flex-row'>
+            {gifs.map((gif, i) => {
+                <img src={require(`../../assets/GIFS/${category}/${i}.gif`).default}
+                alt={gif.name}
+                className="img-thumbnail mx-1"
+                key={gif.name} />
+            })}
+        </div>
         </>
     )
 }
