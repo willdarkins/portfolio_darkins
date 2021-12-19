@@ -4,15 +4,15 @@ function Nav() {
     //Instead of just listing each category's name, we'll create objects that contain each category's name and a short description
     const categories = [
         {
-            name: "front-end",
+            name: "Front-End",
             description: "Full stack web projects featuring simple, elegant designs"
         },
         {
-            name: "back-end",
+            name: "Back-End",
             description: "CLI applications geared towards functionality for CMS projects"
         },
         {
-            name: "broadcasting",
+            name: "Radio",
             description: "Samples of my weekly sports radio show in Portland, OR"
         }
     ]
@@ -35,6 +35,13 @@ function Nav() {
                             Contact
                         </span>
                     </li>
+                    {categories.map((category) => {
+                        <li key={category.name}>
+                            <span onClick={categorySelected}>
+                                {category.name}
+                            </span>
+                        </li>
+                    })}
                 </ul>
             </nav>
         </header>
