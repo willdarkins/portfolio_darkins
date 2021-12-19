@@ -1,10 +1,14 @@
 import React from 'react'
 
-function Projects() {
+function Projects(props) {
+    const currentCategory = {
+        name: "Front-End",
+        description: "Full stack web projects featuring simple, elegant designs"
+    }
     return (
         <section>
-            <h1>NAME</h1>
-            <p>DESCRIPTION</p>
+            <h1>{currentCategory.name}</h1>
+            <p>{currentCategory.description}</p>
         </section>
     )
 }
