@@ -1,60 +1,65 @@
 import React from "react";
 import {
-  AppBar,
-  Toolbar,
-  CssBaseline,
-  Typography,
-  makeStyles,
+    AppBar,
+    Toolbar,
+    CssBaseline,
+    Typography,
+    makeStyles,
+    useTheme,
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
     navlinks: {
-      marginLeft: theme.spacing(10),
-      display: "flex",
+        marginRight: theme.spacing(50),
+        display: "flex",
     },
-   logo: {
-      flexGrow: "1",
-      cursor: "pointer",
+    logo: {
+        flexGrow: "1",
+        cursor: "pointer",
     },
     Link: {
-      textDecoration: "none",
-      color: "white",
-      fontSize: "20px",
-      marginLeft: theme.spacing(20),
-      "&:hover": {
-        color: "yellow",
-        borderBottom: "1px solid white",
-      },
+        textDecoration: "none",
+        color: "white",
+        fontSize: "20px",
+        marginLeft: theme.spacing(20),
+        "&:hover": {
+            color: "#00FF65",
+            borderBottom: "1px solid white",
+        },
     },
-  }));
-  
-  function Navbar() {
+}));
+
+function Navbar() {
     const classes = useStyles();
-  
+    const theme = useTheme();
+
     return (
-      <AppBar position="static">
-        <CssBaseline />
-        <Toolbar>
-          <Typography variant="h4" className={classes.logo}>
-            Navbar
-          </Typography>
-            <div className={classes.navlinks}>
-              <Link to="/" className={classes.link}>
-                Home
-              </Link>
-              <Link to="/about" className={classes.link}>
-                About
-              </Link>
-              <Link to="/contact" className={classes.link}>
-                Contact
-              </Link>
-            </div>
-        </Toolbar>
-      </AppBar>
+        <AppBar position="static">
+            <CssBaseline />
+            <Toolbar>
+                <Typography variant="h2" className={classes.logo}>
+                    WD
+                </Typography>
+                <div className={classes.navlinks}>
+                    <Link to="/" className={classes.Link}>
+                        Home
+                    </Link>
+                    <Link to="/about" className={classes.Link}>
+                        About
+                    </Link>
+                    <Link to="/projects" className={classes.Link}>
+                        Projects
+                    </Link>
+                    <Link to="/contact" className={classes.Link}>
+                        Contact
+                    </Link>
+                </div>
+            </Toolbar>
+        </AppBar>
     );
-  }
-  export default Navbar;
+}
+export default Navbar;
 
 // function Nav() {
 //     //Instead of just listing each category's name, we'll create objects that contain each category's name and a short description
