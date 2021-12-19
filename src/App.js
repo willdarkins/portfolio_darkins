@@ -12,8 +12,8 @@ function App() {
       <>
         <Navbar>
           <Routes>
-            <Route exact path="/about" component={About} />
-            <Route exact path="/projects" component={Projects} />
+            <Route exact path="/about" element={About} />
+            <Route exact path="/projects" element={Projects} />
           </Routes>
         </Navbar>
         <main className='App-header'>
