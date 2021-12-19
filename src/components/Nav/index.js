@@ -17,9 +17,7 @@ function Nav() {
         }
     ]
     function categorySelected () {
-        return (
-            console.log("Fuck You")
-        )
+            alert("Fuck You")
     }
     return (
         <header>
@@ -40,9 +38,10 @@ function Nav() {
                             Contact
                         </span>
                     </li>
+                    {/* map over the cateogires array to display in the nav bar */}
                     {categories.map((category) => (
                         <li key={category.name}>
-                            <span onClick={categorySelected}>
+                            <span onClick={() => categorySelected()} >
                                 {category.name}
                             </span>
                         </li>
