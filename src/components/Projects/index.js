@@ -13,5 +13,4 @@ function Projects({currentCategory}) {
         </section>
     )
 }
-
 export default Projects
