@@ -16,6 +16,11 @@ function Nav() {
             description: "Samples of my weekly sports radio show in Portland, OR"
         }
     ]
+    function categorySelected () {
+        return (
+            console.log("Fuck You")
+        )
+    }
     return (
         <header>
             <h2>
@@ -35,13 +40,13 @@ function Nav() {
                             Contact
                         </span>
                     </li>
-                    {categories.map((category) => {
+                    {categories.map((category) => (
                         <li key={category.name}>
                             <span onClick={categorySelected}>
                                 {category.name}
                             </span>
                         </li>
-                    })}
+                    ))}
                 </ul>
             </nav>
         </header>
