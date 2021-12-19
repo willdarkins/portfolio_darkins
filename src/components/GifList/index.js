@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import gif from '../../assets/GIFS/tech-blog.gif'
 
 function GifList() {
