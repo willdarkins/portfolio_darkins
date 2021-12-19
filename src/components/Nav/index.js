@@ -7,7 +7,6 @@ import {
   makeStyles,
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
-import { capitalizeFirstLetter } from '../../utils/helpers'
 
 const useStyles = makeStyles((theme) => ({
     navlinks: {
@@ -18,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
       flexGrow: "1",
       cursor: "pointer",
     },
-    link: {
+    Link: {
       textDecoration: "none",
       color: "white",
       fontSize: "20px",
