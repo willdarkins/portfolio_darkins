@@ -12,7 +12,9 @@ function Projects(props) {
         <section>
             <h1>{capitalizeFirstLetter(currentCategory.name)}</h1>
             <p>{currentCategory.description}</p>
-            <img src={logo} alt="loading..." />
+            <div className="flex-row">
+                <img src={logo} alt="loading..." className="img-thumbnail mx-1" />
+            </div>
         </section>
     )
 }
