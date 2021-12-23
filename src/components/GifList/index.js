@@ -35,7 +35,7 @@ function GifList({ category }) {
         <div className="flex-row">
           {currentGifs.map((gif, i) => (
             <img
-              src={require(`../../assets/LARGE/${category}/${i}.gif`).default}
+              src={require(`../../assets/LARGE/${category}/${gif.name}.gif`)}
               alt={gif.name}
               className="img-thumbnail mx-1"
               key={gif.name}

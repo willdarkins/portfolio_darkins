@@ -2,14 +2,14 @@ import React from 'react'
 // import { capitalizeFirstLetter } from '../../utils/helpers';
 import GifList from '../GifList';
 
-function Gallery(currentCategory) {
-    const { name, description} = currentCategory
+function Gallery(props) {
+    const { currentCategory } = props;
     return (
         <>
             <section>
-                <h1>{name}</h1>
-                <p>{description}</p>
-                <GifList category={currentCategory.name}/>
+                <h1>{currentCategory.name}</h1>
+                <p>{currentCategory.description}</p>
+                <GifList category={currentCategory.name} />
             </section>
         </>
     )
