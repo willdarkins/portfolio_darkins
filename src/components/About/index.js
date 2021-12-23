@@ -1,12 +1,13 @@
-import React from "react";
-import ProfilePic from "../../assets/ProfilePic.jpg"
-
+import React from 'react'
+import ProfilePic from '../../assets/ProfilePic.jpg'
 function About() {
-    return(
-        <section>
-            <h1>Hi there! I'm Will. </h1>
-            <img src={ProfilePic} style={{width:"100%"}} alt= 'cover' />
-        </section>
+    return (
+        <>
+            <section className="my-5">
+                <h1 id="about">Who am I?</h1>
+                <img src={ProfilePic} className='my-2' style={{ width: '30%' }} alt='cover' />
+            </section>
+        </>
     )
 }
 
