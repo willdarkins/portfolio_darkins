@@ -7,6 +7,7 @@ import ContactForm from './components/Contact';
 // import { BrowserRouter as Router, Route, Switch  } from 'react-router-dom';
 
 function App() {
+    const [contactSelected, setContactSelected] = useState(false);
     const [categories] = useState([
         {
             name: "front-end",
@@ -32,12 +33,20 @@ function App() {
             <Navbar
                 categories={categories}
                 setCurrentCategory={setCurrentCategory}
-                currentCategory={currentCategory}>
+                currentCategory={currentCategory}
+                contactSelected={contactSelected}
+                setContactSelected={setContactSelected}>
+                    
             </Navbar>
             <main>
-                <ContactForm />
-                <Gallery currentCategory={currentCategory}></Gallery>
-                <About />
+                {!contactSelected ? (
+                    <>
+                        <Gallery currentCategory={currentCategory}></Gallery>
+                        <About></About>
+                    </>
+                ) : (
+                    <ContactForm></ContactForm>
+                )}
             </main>
         </>
     );

@@ -19,7 +19,7 @@ function ContactForm() {
             }
         }
         if (!errorMessage) {
-        setFormState({ ...formState, [e.target.name]: e.target.value })
+            setFormState({ ...formState, [e.target.name]: e.target.value })
         }
     }
     function handleSubmit(e) {
@@ -49,6 +49,11 @@ function ContactForm() {
                             <Grid xs={12} item>
                                 <TextField type="text" label='Message' multiline rows={4} placeholder='Type Your Message Here' variant="outlined" fullWidth required defaultValue={message} onChange={handleChange} name="message" />
                             </Grid>
+                            {errorMessage && (
+                                <div>
+                                    <p className="error-text">{errorMessage}</p>
+                                </div>
+                            )}
                             <Grid xs={12} item>
                                 <Button type='submit' variant='contained' color='primary' fullWidth>Submit</Button>
                             </Grid>

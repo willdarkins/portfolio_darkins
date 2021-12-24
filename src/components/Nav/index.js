@@ -6,12 +6,8 @@ function Navbar(props) {
         categories = [],
         setCurrentCategory,
         currentCategory,
+        setContactSelected
     } = props;
-
-    const handleClick = (item) => {
-        console.log(item);
-        return item;
-    };
 
     return (
         <>
@@ -24,12 +20,12 @@ function Navbar(props) {
                 <nav>
                     <ul className="flex-row">
                         <li className="mx-2">
-                            <a href="#about">
+                            <a href="#about" onClick={() => setContactSelected(false)}>
                                 About me
                             </a>
                         </li>
                         <li className={"mx-2"}>
-                            <span onClick={() => handleClick('Contact')}>
+                            <span onClick={() => setContactSelected(true)}>
                                 Contact
                             </span>
                         </li>
@@ -37,7 +33,12 @@ function Navbar(props) {
                             <li className={`mx-1 ${currentCategory.name === category.name
                                 }`}
                                 key={category.name}>
-                                <span onClick={() => { setCurrentCategory(category) }} >
+                                <span
+                                    onClick={() => {
+                                        setCurrentCategory(category);
+                                        setContactSelected(false);
+                                    }}
+                                >
                                     {capitalizeFirstLetter(category.name)}
                                 </span>
                             </li>
