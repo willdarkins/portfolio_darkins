@@ -3,6 +3,7 @@ import './assets/index.css';
 import About from './components/About';
 import Navbar from './components/Nav';
 import Gallery from './components/Gallery';
+import ContactForm from './components/Contact';
 // import { BrowserRouter as Router, Route, Switch  } from 'react-router-dom';
 
 function App() {
@@ -31,9 +32,10 @@ function App() {
             <Navbar
                 categories={categories}
                 setCurrentCategory={setCurrentCategory}
-                currentCategory={currentCategory}>  
+                currentCategory={currentCategory}>
             </Navbar>
             <main>
+                <ContactForm />
                 <Gallery currentCategory={currentCategory}></Gallery>
                 <About />
             </main>
