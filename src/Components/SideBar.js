@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Nav from './Nav'
 
 const BarStyles = styled.div `
     background-color: var(--sidebar);
@@ -12,7 +13,7 @@ const BarStyles = styled.div `
 function SideBar() {
     return (
         <BarStyles>
-            
+        <Nav />
         </BarStyles>
     )
 }

@@ -1,7 +1,7 @@
 // file to set gloabal styles throughout the entire app using styled-components dependency
 import { createGlobalStyle } from "styled-components";
 
-
+// global styles Component
 const GlobalStyle = createGlobalStyle`
     * {
         padding: 0;
