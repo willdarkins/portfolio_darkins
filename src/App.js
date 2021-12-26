@@ -1,4 +1,5 @@
 import React from 'react'
+import SideBar from './Components/SideBar'
 import styled from 'styled-components'
 
 const AppStyled = styled.div`
@@ -7,9 +8,7 @@ const AppStyled = styled.div`
 
 function App() {
     return (
-        <AppStyled>
-            <h1>Here's a test</h1>
-        </AppStyled>
+        <SideBar />
     )
 }
 
