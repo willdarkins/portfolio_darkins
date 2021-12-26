@@ -1,55 +1,16 @@
-import React, { useState } from 'react';
-import './assets/index.css';
-import About from './components/About';
-import Navbar from './components/Nav';
-import Gallery from './components/Gallery';
-import ContactForm from './components/Contact';
-// import { BrowserRouter as Router, Route, Switch  } from 'react-router-dom';
+import React from 'react'
+import styled from 'styled-components'
+
+const AppStyled = styled.div`
+    background-color: navy;
+`;
 
 function App() {
-    const [contactSelected, setContactSelected] = useState(false);
-    const [categories] = useState([
-        {
-            name: "front-end",
-            description: "List of projects utilizing knowledge of front-end frameworks and programming languages.",
-        },
-        {
-            name: "back-end",
-            description: "List of projects emphasizing knowlege in data managment and server implementation.",
-        },
-        {
-            name: "social-media",
-            description: "Attention getting grphics created to promote Portland Sports Radio brand.",
-        },
-        {
-            name: "podcasting",
-            description: "Sound clips from my weekend sports radio show on KFXX-AM ESPN Sports Radio 1080 The FAN.",
-        },
-    ]);
-
-    const [currentCategory, setCurrentCategory] = useState(categories[0])
     return (
-        <>
-            <Navbar
-                categories={categories}
-                setCurrentCategory={setCurrentCategory}
-                currentCategory={currentCategory}
-                contactSelected={contactSelected}
-                setContactSelected={setContactSelected}>
-                    
-            </Navbar>
-            <main>
-                {!contactSelected ? (
-                    <>
-                        <Gallery currentCategory={currentCategory}></Gallery>
-                        <About></About>
-                    </>
-                ) : (
-                    <ContactForm></ContactForm>
-                )}
-            </main>
-        </>
-    );
+        <AppStyled>
+            <h1>Here's a test</h1>
+        </AppStyled>
+    )
 }
 
-export default App;
+export default App
