@@ -19,8 +19,8 @@ const GlobalStyle = createGlobalStyle`
         --font-dark: #313131;
         --font-dark-v2: #151515;
         --font-light: #a4acc4;
-        --sidebar: #0e0f21;
-        --border: #2e344e;
+        --sidebar: #002838;
+        --border: #0ea84c;
         --primary: #007bff;
         --secondary: #6c757d;
     }
