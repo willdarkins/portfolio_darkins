@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
         list-style: none;
         text-decoration: none;
         box-sizing: border-box;
+        font-family: 'Work Sans', sans-serif;
         /* font-size: 1.5rem; */
     }
 /* root pseudo class to create variables across styles */

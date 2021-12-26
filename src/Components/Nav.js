@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import profile from '../Images/Profile-Pic.jpg'
 
-// styles variable from styled-components dependency applied to Nav
+//styles variable from styled-components dependency applied to Nav
 const NavStyles = styled.nav`
     display: flex;
     justify-content: space-between;
@@ -13,6 +13,7 @@ const NavStyles = styled.nav`
     width: 100%;
     border-right: 2px solid var(--border);
 
+//targeting profile picture in sidebar
     .profile {
         width: 90%;
         padding: 3rem 0;
@@ -22,7 +23,17 @@ const NavStyles = styled.nav`
             border-radius: 35%;
             border: 4px solid var(--border)
         }
-    .list-items
+    .list-items {
+        width: 100%;
+        text-align: center;
+        li {
+            display: block;
+            a {
+                display: block;
+
+            }
+        }
+    }
     }
 `
 
