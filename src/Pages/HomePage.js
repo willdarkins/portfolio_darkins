@@ -4,11 +4,13 @@ import GitHubIcon from '@material-ui/icons/GitHub'
 import LinkedinIcon from '@material-ui/icons/LinkedIn'
 import { Icon } from '@iconify/react';
 
+//styles variable from styled-components dependency applied to HomePage component
 const HomeStyles = styled.header`
     width: 100%;
     height: 100vh;
     position: relative;
 
+//targeting intro portion of page with text and icons
     .intro{
         position: absolute;
         width: 80%;
@@ -55,15 +57,15 @@ function HomePage() {
                     what I'm doing on daily basis. This blurb will go on three more times.
                 </p>
                 <div className='icon-list'>
-                    <div className='icon'>
+                    <a href='https://www.linkedin.com/in/will-darkins-827368b2/' className='icon' target="_blank" >
                         <LinkedinIcon style={{ fontSize: 40 }} />
-                    </div>
-                    <div className='icon' >
+                    </a>
+                    <a href='https://github.com/willdarkins' className='icon' target="_blank">
                         <GitHubIcon style={{ fontSize: 40 }} />
-                    </div>
-                    <div className='icon'>
-                    <Icon icon="mdi:vimeo" style={{ fontSize: 40 }} />
-                    </div>
+                    </a>
+                    <a href='https://vimeo.com/user156064740' className='icon' target="_blank">
+                        <Icon icon="mdi:vimeo" style={{ fontSize: 40 }} />
+                    </a>
                 </div>
             </div>
         </HomeStyles>
