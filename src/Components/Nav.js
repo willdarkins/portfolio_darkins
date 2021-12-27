@@ -23,18 +23,20 @@ const NavStyles = styled.nav`
             border-radius: 35%;
             border: 4px solid var(--border)
         }
-    .list-items {
+    .nav-list {
         width: 100%;
         text-align: center;
-        li {
+        font-size: 50rem;
+        .list-item {
             display: block;
             text-align: center;
+            
             a {
                 display: block;
                 &:hover {
                     cursor: pointer;
                 }
-                padding: 20rem;
+
             }
         }
     }
@@ -57,25 +59,25 @@ function Nav() {
                 <img src={profile} alt='profile photo' />
             </div>
             <ul className='nav-list'>
-                <li className='list-items'>
+                <li className='list-item'>
                     <NavLink to='/home' activeClassName='active-class'>Home</NavLink>
                 </li>
-                <li className='list-items'>
+                <li className='list-item'>
                     <NavLink to='/about' activeClassName='active-class'>About</NavLink>
                 </li>
-                <li className='list-items'>
+                <li className='list-item'>
                     <NavLink to='/portfolio' activeClassName='active-class'>Portfolio</NavLink>
                 </li>
-                <li className='list-items'>
+                <li className='list-item'>
                     <NavLink to='/resume' activeClassName='active-class'>Resume</NavLink>
                 </li>
-                <li className='list-items'>
+                <li className='list-item'>
                     <NavLink to='/social' activeClassName='active-class'>Social</NavLink>
                 </li>
-                <li className='list-items'>
+                <li className='list-item'>
                     <NavLink to='/podcasting' activeClassName='active-class'>Podcasting</NavLink>
                 </li>
-                <li className='list-items'>
+                <li className='list-item'>
                     <NavLink to='/contact' activeClassName='active-class'>Contact</NavLink>
                 </li>
             </ul>

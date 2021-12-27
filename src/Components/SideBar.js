@@ -9,7 +9,7 @@ const BarStyles = styled.div `
     position: fixed;
     width: 16.5rem;
     height: 100vh;
-
+    font-size: 50rem;
 `
 
 function SideBar() {
