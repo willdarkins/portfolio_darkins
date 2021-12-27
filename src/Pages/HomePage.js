@@ -14,14 +14,6 @@ const HomeStyles = styled.header`
     position: relative;
 
 //targeting intro portion of page with text and icons
-    .hero-background{
-        background-image: url(${Background});
-        height: 100vh;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-
-    }
     .intro{
         position: absolute;
         width: 80%;
@@ -68,8 +60,6 @@ function HomePage() {
     };
     return (
         <HomeStyles>
-            <div className='hero-background'>
-            <Particles params={particlesConfig}/>
             <div className='intro'>
                 <h1>👋 Hi there! I'm <span>Will Darkins</span></h1>
                 <p>
@@ -90,7 +80,6 @@ function HomePage() {
                         <Icon icon="mdi:vimeo" style={{ fontSize: 40 }} />
                     </a>
                 </div>
-            </div>
             </div>
         </HomeStyles>
     )
