@@ -11,7 +11,7 @@ const NavStyles = styled.nav`
     align-items: center;
     height: 100%;
     width: 100%;
-    border-right: 2px solid var(--border);
+    box-shadow: 5px 10px 18px #888888;
 
 //targeting profile picture in sidebar
     .profile {
@@ -23,9 +23,6 @@ const NavStyles = styled.nav`
             border-radius: 35%;
             border: 4px solid var(--border)
         }
-    .nav-list{
-        align-items: center;
-    }
     .list-items {
         width: 100%;
         text-align: center;
@@ -37,14 +34,14 @@ const NavStyles = styled.nav`
                 &:hover {
                     cursor: pointer;
                 }
-                padding: .1rem;
+                padding: 20rem;
             }
         }
     }
     }
     footer {
         p {
-            padding: 1rem 0;
+            padding: .5rem 0;
             font-size: 1.2rem;
             display: block;
             text-align: center;
