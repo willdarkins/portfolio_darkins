@@ -16,24 +16,40 @@ const NavStyles = styled.nav`
 //targeting profile picture in sidebar
     .profile {
         width: 90%;
-        padding: 3rem 0;
+        padding: 1rem 0;
         text-align: center;
         img {
-            width: 80%;
+            width: 71%;
             border-radius: 35%;
             border: 4px solid var(--border)
         }
+    .nav-list{
+        align-items: center;
+    }
     .list-items {
         width: 100%;
         text-align: center;
         li {
             display: block;
+            text-align: center;
             a {
                 display: block;
-
+                &:hover {
+                    cursor: pointer;
+                }
+                padding: .1rem;
             }
         }
     }
+    }
+    footer {
+        p {
+            padding: 1rem 0;
+            font-size: 1.2rem;
+            display: block;
+            text-align: center;
+        }
+        border-top: 1px solid var(--border);
     }
 `
 
@@ -67,7 +83,7 @@ function Nav() {
                 </li>
             </ul>
         <footer className='footer'>
-        @2021 Will Darkins
+        <p>Will Darkins - 2021</p>
         </footer>
         </NavStyles>
     )

@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
         text-decoration: none;
         box-sizing: border-box;
         font-family: 'Work Sans', sans-serif;
-        /* font-size: 1.5rem; */
+        font-size: 1.2rem;
     }
 /* root pseudo class to create variables across styles */
     :root {
@@ -19,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
         --background-light: #f1f1f1;
         --font-dark: #313131;
         --font-dark-v2: #151515;
-        --font-light: #a4acc4;
+        --font-light: #F9F6EE;
         --sidebar: #002838;
         --border: #0ea84c;
         --primary: #007bff;
@@ -27,7 +27,14 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
+        color: var(--font-light);
         background-color: var(--background-color)
+    }
+
+    a {
+        font-family: inherit;
+        color: inherit;
+        font-size: inherit;
     }
 `
 export default GlobalStyle
