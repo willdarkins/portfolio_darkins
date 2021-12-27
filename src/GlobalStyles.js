@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
         text-decoration: none;
         box-sizing: border-box;
         font-family: 'Work Sans', sans-serif;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 /* root pseudo class to create variables across styles */
     :root {
@@ -24,6 +24,7 @@ const GlobalStyle = createGlobalStyle`
         --border: #0ea84c;
         --primary: #007bff;
         --secondary: #6c757d;
+        --blue: #247cc4;
     }
 
     body {
@@ -35,6 +36,14 @@ const GlobalStyle = createGlobalStyle`
         font-family: inherit;
         color: inherit;
         font-size: inherit;
+    }
+    h1{
+        font-size: 3rem;
+        color: var(--background-dark);
+        span{
+            color: var(--blue);
+            font-size: 3rem; 
+        }
     }
 `
 export default GlobalStyle

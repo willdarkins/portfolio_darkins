@@ -1,5 +1,6 @@
 import React from 'react'
 import SideBar from './Components/SideBar'
+import HomePage from './Pages/HomePage'
 import styled from 'styled-components'
 
 //styles to be applied to main content section on the app... this is everything but the SibeBar and Nav
@@ -22,20 +23,15 @@ const MainStyles = styled.main `
     }
 
 `
-
 function App() {
     return (
         <>
-        <SideBar />
+        <SideBar /> 
         <MainStyles>
-        <div className='lines'>
-            <div className='line-1'></div>
-            <div className='line-2'></div>
-            <div className='line-3'></div>
-            <div className='line-4'></div>
-        </div>
-        </MainStyles>
 
+        <HomePage />
+        </MainStyles>
+        
         </>
     )
 }

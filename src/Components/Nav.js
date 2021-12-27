@@ -30,7 +30,6 @@ const NavStyles = styled.nav`
         .list-item {
             display: block;
             text-align: center;
-            
             a {
                 display: block;
                 &:hover {
