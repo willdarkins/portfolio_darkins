@@ -28,10 +28,8 @@ function App() {
         <>
         <SideBar /> 
         <MainStyles>
-
         <HomePage />
         </MainStyles>
-        
         </>
     )
 }

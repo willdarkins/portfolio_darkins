@@ -1,8 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+import Particles from 'react-tsparticles'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import LinkedinIcon from '@material-ui/icons/LinkedIn'
 import { Icon } from '@iconify/react';
+import Background from '../Images/home-background.jpg'
+import particlesConfig from '../Config/particle-config'
 
 //styles variable from styled-components dependency applied to HomePage component
 const HomeStyles = styled.header`
@@ -11,6 +14,14 @@ const HomeStyles = styled.header`
     position: relative;
 
 //targeting intro portion of page with text and icons
+    .hero-background{
+        background-image: url(${Background});
+        height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
     .intro{
         position: absolute;
         width: 80%;
@@ -19,6 +30,7 @@ const HomeStyles = styled.header`
         transform: translate(-50%, -50%);
         text-align: center;
         font-size: 1rem;
+        
         h1{
             padding-bottom: 2rem;
         }
@@ -45,8 +57,19 @@ const HomeStyles = styled.header`
     }
 `
 function HomePage() {
+    const particlesInit = (main) => {
+        console.log(main);
+
+        // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
+    };
+
+    const particlesLoaded = (container) => {
+        console.log(container);
+    };
     return (
         <HomeStyles>
+            <div className='hero-background'>
+            <Particles params={particlesConfig}/>
             <div className='intro'>
                 <h1>👋 Hi there! I'm <span>Will Darkins</span></h1>
                 <p>
@@ -67,6 +90,7 @@ function HomePage() {
                         <Icon icon="mdi:vimeo" style={{ fontSize: 40 }} />
                     </a>
                 </div>
+            </div>
             </div>
         </HomeStyles>
     )
