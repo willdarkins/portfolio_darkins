@@ -64,12 +64,12 @@ function BasicInfo() {
                         <p>Special</p>
                     </div>
                     <div className='info'>
-                        <p>:  William Darkins</p>
-                        <p>:  33</p>
-                        <p>:  Portland, OR</p>
-                        <p>:  Oregon State University</p>
-                        <p>:  Digital Content Director</p>
-                        <p>:  Impeccable Edward James Olmos impression </p>
+                        <p>:    William Darkins</p>
+                        <p>:    33</p>
+                        <p>:    Portland, OR</p>
+                        <p>:    Oregon State University</p>
+                        <p>:    Digital Content Director, Audacy Portland</p>
+                        <p>:    Impeccable Edward James Olmos impression </p>
                     </div>
                 </div>
                 <div className='Button'>
