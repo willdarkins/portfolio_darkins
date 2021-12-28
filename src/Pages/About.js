@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Title from '../Components/Title'
+import BasicInfo from '../Components/BasicInfo'
 import { MainLayout } from '../Styles/Layout'
 
 const AboutStyles = styled.section`
@@ -11,7 +12,8 @@ function About() {
         <MainLayout>
             <AboutStyles>
                 {/* props to be passed to Title component */}
-                <Title title={'About'} /> 
+                <Title title={'About'} />
+                <BasicInfo />
             </AboutStyles>
         </MainLayout>
     )
