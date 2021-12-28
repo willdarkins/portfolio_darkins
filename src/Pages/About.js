@@ -6,7 +6,6 @@ import { MainLayout } from '../Styles/Layout'
 const AboutStyles = styled.section`
 
 `
-
 function About() {
     return (
         <MainLayout>

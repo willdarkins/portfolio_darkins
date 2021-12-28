@@ -20,9 +20,10 @@ const MainStyles = styled.main`
 `
 function App() {
     return (
-        <><Router forceRefresh>
-            <SideBar />
-            <MainStyles>
+        <>
+            <Router forceRefresh>
+                <SideBar />
+                <MainStyles>
                     <Switch>
                         <Route exact path='/' component={HomePage} />
                         <Route exact path='/about' component={About} />
@@ -32,7 +33,7 @@ function App() {
                         <Route exact path='/podcasting' component={Podcasting} />
                         <Route exact path='/contact' component={Contact} />
                     </Switch>
-            </MainStyles>
+                </MainStyles>
             </Router>
         </>
     )

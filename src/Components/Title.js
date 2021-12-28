@@ -11,7 +11,6 @@ const TitleStyles = styled.div`
         border-bottom: var(--blue) solid;
     }
 `
-
 //passing prop that will be universal values for page titles across each section of the site
 function Title({ title }) {
     return (
