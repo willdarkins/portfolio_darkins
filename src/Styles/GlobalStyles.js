@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
         text-decoration: none;
         box-sizing: border-box;
         font-family: 'Work Sans', sans-serif;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 /* root pseudo class to create variables across styles */
     :root {
