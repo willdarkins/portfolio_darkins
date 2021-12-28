@@ -5,14 +5,20 @@ const TitleStyles = styled.div`
     position: relative;
     h2{
         color: var(--font-dark);
+        font-size: 3rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        border-bottom: var(--blue) solid;
     }
 `
 
-//passing two props that will be universal values for page titles across each section of the site
-function Title({ title, span }) {
+//passing prop that will be universal values for page titles across each section of the site
+function Title({ title }) {
     return (
         <>
-            <h2>{title} <span>{span}</span></h2>
+            <TitleStyles>
+                <h2>{title}</h2>
+            </TitleStyles>
         </>
     )
 }
