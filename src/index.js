@@ -12,7 +12,7 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import App from './App';
-import GlobalStyle from './GlobalStyles'
+import GlobalStyle from './Styles/GlobalStyles'
 
 
 ReactDOM.render(
