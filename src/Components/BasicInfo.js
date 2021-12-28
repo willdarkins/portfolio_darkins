@@ -8,8 +8,10 @@ const InfoStyles = styled.div`
     margin-top: 3rem;
     .img-content{
         width: 100%;
+        height: 40vh;
         img{
             width: 92%;
+            object-fit: cover;
         }
     }
     .descrip-content
