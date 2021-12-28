@@ -36,6 +36,7 @@ const GlobalStyle = createGlobalStyle`
         font-family: inherit;
         color: inherit;
         font-size: inherit;
+        font-size: 1.7rem;
     }
     h1{
         font-size: 3rem;

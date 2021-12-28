@@ -30,8 +30,13 @@ const NavStyles = styled.nav`
         .list-item {
             display: block;
             text-align: center;
+            padding: 10rem 0;
             a {
+                padding: 10rem 0;
                 display: block;
+                padding: 10rem 0;
+                position: relative;
+                letter-spacing: 10px;
                 &:hover {
                     cursor: pointer;
                 }
@@ -42,7 +47,7 @@ const NavStyles = styled.nav`
     }
     footer {
         p {
-            padding: .5rem 0;
+            padding: 1rem 0;
             font-size: 1.2rem;
             display: block;
             text-align: center;
@@ -59,25 +64,25 @@ function Nav() {
             </div>
             <ul className='nav-list'>
                 <li className='list-item'>
-                    <NavLink to='/home' activeClassName='active-class'>Home</NavLink>
+                    <NavLink exact to='/' activeClassName='active-class'>Home</NavLink>
                 </li>
                 <li className='list-item'>
-                    <NavLink to='/about' activeClassName='active-class'>About</NavLink>
+                    <NavLink exact to='/about' activeClassName='active-class'>About</NavLink>
                 </li>
                 <li className='list-item'>
-                    <NavLink to='/portfolio' activeClassName='active-class'>Portfolio</NavLink>
+                    <NavLink exact to='/portfolio' activeClassName='active-class'>Portfolio</NavLink>
                 </li>
                 <li className='list-item'>
-                    <NavLink to='/resume' activeClassName='active-class'>Resume</NavLink>
+                    <NavLink exact to='/resume' activeClassName='active-class'>Resume</NavLink>
                 </li>
                 <li className='list-item'>
-                    <NavLink to='/social' activeClassName='active-class'>Social</NavLink>
+                    <NavLink exact to='/social' activeClassName='active-class'>Social</NavLink>
                 </li>
                 <li className='list-item'>
-                    <NavLink to='/podcasting' activeClassName='active-class'>Podcasting</NavLink>
+                    <NavLink exact to='/podcasting' activeClassName='active-class'>Podcasting</NavLink>
                 </li>
                 <li className='list-item'>
-                    <NavLink to='/contact' activeClassName='active-class'>Contact</NavLink>
+                    <NavLink exact to='/contact' activeClassName='active-class'>Contact</NavLink>
                 </li>
             </ul>
         <footer className='footer'>
