@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 import profile from '../Images/Profile-Pic.jpg'
+import Button from '@mui/material/Button';
 
 const InfoStyles = styled.div`
     display: flex;
-    margin-top: 4.5rem;
+    margin-top: 3rem;
     .img-content{
         width: 100%;
         img{
@@ -13,7 +14,7 @@ const InfoStyles = styled.div`
     }
     .descrip-content
     h4{
-        font-size: 2rem;
+        font-size: 2.5rem;
         color: var(--font-dark);
     }
     .paragraph{
@@ -29,15 +30,17 @@ const InfoStyles = styled.div`
                 font-weight: bolder;
             }
         }
-
+    }
         .info-title, .info{
             p{
                 padding: .2rem 0;
                 color: var(--font-dark);
             }
-        }
-
     }
+        .Button{
+            padding-top: 2.2rem;
+        }
+    
 `
 function BasicInfo() {
     return (
@@ -68,6 +71,11 @@ function BasicInfo() {
                         <p>:  Digital Content Director</p>
                         <p>:  Impeccable Edward James Olmos impression </p>
                     </div>
+                </div>
+                <div className='Button'>
+                    <Button variant="contained" size="large">
+                        Get in Contact, Now!
+                    </Button>
                 </div>
             </div>
         </InfoStyles>
