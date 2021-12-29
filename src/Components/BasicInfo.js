@@ -10,7 +10,7 @@ const InfoStyles = styled.div`
         width: 100%;
         height: 40vh;
         img{
-            width: 92%;
+            width: 80%;
             object-fit: cover;
         }
     }
@@ -40,7 +40,7 @@ const InfoStyles = styled.div`
             }
     }
         .Button{
-            padding-top: 2.2rem;
+            padding-top: 3rem;
         }
     
 `
