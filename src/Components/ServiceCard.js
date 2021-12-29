@@ -11,6 +11,25 @@ const CardStyles = styled.div`
     .container:hover{
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     }
+    h4{
+        font-size: 1.3rem;
+        padding: 1rem 0;
+        position: relative;
+        &::after{
+            content: '';
+            width: 4rem;
+            background-color: var(--background);
+            height: 4px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            border-radius: 10px;
+        }
+    }
+    p{
+        padding: .8rem 0    ;
+
+    }
 `
 
 
