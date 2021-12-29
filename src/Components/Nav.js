@@ -27,12 +27,14 @@ const NavStyles = styled.nav`
         width: 100%;
         text-align: center;
         font-size: 50rem;
-        .list-item {
+        li {
             display: block;
             text-align: center;
             padding: 10rem 0;
             a {
+                z-index: 1;
                 padding: 10rem 0;
+                text-decoration: none;
                 display: block;
                 padding: 10rem 0;
                 position: relative;
@@ -41,6 +43,13 @@ const NavStyles = styled.nav`
                     cursor: pointer;
                 }
 
+            }
+            li:before{
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-color: var(--border);
             }
         }
     }
