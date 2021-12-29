@@ -11,7 +11,7 @@ const NavStyles = styled.nav`
     align-items: center;
     height: 100%;
     width: 100%;
-    box-shadow: 5px 10px 18px #888888;
+    box-shadow: 5px 4px 10px #888888;
 
 //targeting profile picture in sidebar
     .profile {
