@@ -24,7 +24,7 @@ function Contact() {
                     <div className='material-contact-form'>
                         <ContactForm />
                     </div>
-                    <div className='contact-panels'>
+                    <div className='contact-cards'>
 
                     </div>
                 </InnerLayout>
