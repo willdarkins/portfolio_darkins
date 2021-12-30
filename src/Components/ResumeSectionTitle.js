@@ -1,10 +1,17 @@
 import React from 'react'
+import styled from 'styled-components'
 
-function ResumeSectionTitle() {
+const SectionTitleStyles = styled.div`
+
+`
+
+//props passed
+function ResumeSectionTitle({icon, title}) {
     return (
-        <div>
-            
-        </div>
+        <SectionTitleStyles>
+            <p>{icon}</p>
+            <h3>{title}</h3>
+        </SectionTitleStyles>
     )
 }
 
