@@ -7,9 +7,14 @@ const SectionTitleStyles = styled.div`
     p{
         padding-right: 1rem;
         color: var(--font-dark);
+        svg{
+            font-size: 3rem;
+        }
     }
     h3{
         color: var(--font-dark);
+        font-size: 2rem;
+
     }
 `
 
