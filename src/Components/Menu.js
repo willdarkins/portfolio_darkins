@@ -4,9 +4,20 @@ import GitHubIcon from '@material-ui/icons/GitHub'
 import LinkIcon from '@mui/icons-material/Link';
 
 const MenuStyles = styled.div`
-
+    color: var(--font-dark);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    .grid-item{
+        .portfolio-content{
+            display: block;
+            position: relative;
+            img{
+                width: 100%;
+            }
+        }
+    }
 `
-
 function Menu({ menuItem }) {
     return (
         <MenuStyles>
