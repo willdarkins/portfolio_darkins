@@ -11,6 +11,9 @@ const ContactStyles = styled.section`
         position: absolute;
         left: auto;
     }
+    .material-contact-form{
+        
+    }
 `
 function Contact() {
     return (

@@ -1,12 +1,24 @@
 import React from 'react'
 import { Card, CardContent, Grid, TextField, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
+import styled from 'styled-components';
 import { margin } from '@mui/system';
+
+const ContactCardStyles = styled.div`
+    .card{
+        box-shadow: 8px 8px 8px 8px rgba(0,0,0,0.2);
+        transition: 0.3s;
+        padding: 1.2rem;
+    }
+    .card:hover{
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+`
 
 function ContactForm() {
     return (
-        <>
-            <Card style={{maxWidth:450, margin:'0 auto'}}>
+        <ContactCardStyles>
+            <Card style={{maxWidth:450, margin:'0 auto'}} className={'card'}>
                 <CardContent>
                     <Typography gutterBottom variant='h5'>Reach out, and say hello!</Typography>
                     <Typography gutterBottom variant='body2' color='textsecondary' component='p'>I'll respond ASAP to questions and work inquires</Typography>
@@ -34,7 +46,7 @@ function ContactForm() {
                     </form>
                 </CardContent>
             </Card>
-        </>
+        </ContactCardStyles>
     )
 }
 
