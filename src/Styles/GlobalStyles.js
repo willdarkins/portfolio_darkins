@@ -51,5 +51,6 @@ const GlobalStyle = createGlobalStyle`
         color: var(--font-dark);
         padding-bottom: .6rem;
     }
+
 `
 export default GlobalStyle

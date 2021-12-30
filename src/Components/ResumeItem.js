@@ -3,17 +3,43 @@ import styled from 'styled-components'
 
 const ItemStyles = styled.div`
     display: flex;
+    &:not(:last-child){
+        padding-bottom: 3rem;
+    }
     *{
         color: var(--font-dark);
     }
     .left-content{
+        position: relative;
         width: 15%;
+        padding-left: 20px;
+        &::before{
+            content: '';
+            position: absolute;
+            left: -10px;
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            border: 2px solid var(--border);
+            background-color: #FFFFFF;
+        }
         p{
             display: inline-block;
 
         }
     }
     .right-content{
+        position: relative;
+        padding-left: 3rem;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 0;
+            width: 1rem;
+            height: 2px;
+            background-color: var(--border);
+        }
         h5{
             color: var(--primary);
             font-size: 2rem;
@@ -21,6 +47,7 @@ const ItemStyles = styled.div`
         }
         h6{
             padding-bottom: .6rem;
+            font-size: 1.5rem;
         }
     }
 `
