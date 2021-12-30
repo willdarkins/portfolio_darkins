@@ -4,13 +4,31 @@ import {MainLayout, InnerLayout} from '../Styles/Layout'
 import Title from '../Components/Title'
 import portfolios from '../Data/portfolios'
 import Menu from '../Components/Menu'
+import FilterButton from '../Components/Button'
+
+//Because each value in the Set has to be unique, the value equality will be checked, and weed out the duplicate category designations
+const allButtons = ['All', ...new Set(portfolios.map(item => item.category))]
 
 function Portfolio() {
     const[menuItem, setMenuItem] = useState(portfolios)
-    return (
+    const[button, setButtons] = useState(allButtons)
+
+    //filter function used in order to filter array items from category and display on a button
+    const filter = (button) => {
+        //conditonal statement to return all data objects from the portfolios array when clicked by the corresponding button
+        if(button === 'All'){
+            setMenuItem(portfolios)
+            return;
+        }
+        const filteredData = portfolios.filter(item=> item.category === button);
+        setMenuItem(filteredData)
+    }
+        return (
         <MainLayout>
             <Title title={'Portfolio'} />
             <InnerLayout>
+                {/* allows me to access the filter function inside the Button Component */}
+                <FilterButton filter={filter} button={button}/>
                 <Menu menuItem={menuItem} />
             </InnerLayout>
         </MainLayout>

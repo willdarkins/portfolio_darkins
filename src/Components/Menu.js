@@ -12,8 +12,16 @@ const MenuStyles = styled.div`
         .portfolio-content{
             display: block;
             position: relative;
+            h6{
+                font-size: 1.5rem;
+            }
             img{
+                height: 30vh;
+                object-fit: cover;
                 width: 100%;
+            }
+            ul{
+                display: none;
             }
         }
     }
