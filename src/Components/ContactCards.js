@@ -1,23 +1,52 @@
 import React from 'react'
 import styled from 'styled-components';
-import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
-import EmailIcon from '@mui/icons-material/Email';
-import PushPinIcon from '@mui/icons-material/PushPin';
 
 const CardStyles = styled.div`
+    padding: 1.5rem 2rem;
+    background-color: #ffff ;
+    color: var(--font-dark);
+    display: flex;
+    align-items: center;
+    box-shadow: 5px 10px 18px #888888;
+    &:not(:last-child){
+        margin-bottom: 2rem;
+    }
+    .left-content {
+        padding: 1.8rem;
+        border: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1.5rem;
+        svg{
+            font-size: 2.2rem; 
+        }
+    .right-content{
+        h6{
+            font-size: 1.2rem;
+            padding-bottom: .6rem;
+        }
+        //turn into anchor tags later
+        p{
+            padding: .4rem 0;
+        }
+    }
+    }
 `
 
-//creating variables to attribute Material UI icon imports in order to render them in ContactPage.js
-const phone = <PhoneIphoneIcon />
-const email = <EmailIcon />
-const location = <PushPinIcon />
-
-function ContactCards() {
+function ContactCard({icon,title, contact1, contact2}) {
     return (
         <CardStyles>
-            
+            <div className='left-content'>
+                <p>{icon}</p>
+            </div>
+            <div className='right-content'>
+                <h6>{title}</h6>
+                <p>{contact1}</p>
+                <p>{contact2}</p>
+            </div>
         </CardStyles>
     )
 }
 
-export default ContactCards
+export default ContactCard

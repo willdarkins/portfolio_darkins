@@ -18,7 +18,7 @@ const ContactCardStyles = styled.div`
 function ContactForm() {
     return (
         <ContactCardStyles>
-            <Card style={{maxWidth:450, margin:'0 auto'}} className={'card'}>
+            <Card style={{maxWidth:535, margin:'0 auto'}} className={'card'}>
                 <CardContent>
                     <Typography gutterBottom variant='h5'>Reach out, and say hello!</Typography>
                     <Typography gutterBottom variant='body2' color='textsecondary' component='p'>I'll respond ASAP to questions and work inquires</Typography>
