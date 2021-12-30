@@ -106,3 +106,5 @@ const portfolios = [
         text: 'A README generator that uses Javascript and node.js to quickly create a professional README for a new project.'
     },
 ]
+
+export default portfolios
