@@ -79,10 +79,10 @@ function Nav() {
                     <NavLink exact to='/about' activeClassName='active-class'>About</NavLink>
                 </li>
                 <li className='list-item'>
-                    <NavLink exact to='/portfolio' activeClassName='active-class'>Portfolio</NavLink>
+                    <NavLink exact to='/resume' activeClassName='active-class'>Resume</NavLink>
                 </li>
                 <li className='list-item'>
-                    <NavLink exact to='/resume' activeClassName='active-class'>Resume</NavLink>
+                    <NavLink exact to='/portfolio' activeClassName='active-class'>Portfolio</NavLink>
                 </li>
                 <li className='list-item'>
                     <NavLink exact to='/social' activeClassName='active-class'>Social</NavLink>

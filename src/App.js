@@ -2,12 +2,12 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import SideBar from './Components/SideBar'
 import HomePage from './Pages/HomePage'
-import About from './Pages/About'
-import Portfolio from './Pages/Portfolio'
-import Resume from './Pages/Resume';
-import Social from './Pages/Social';
-import Podcasting from './Pages/Podcasting';
-import Contact from './Pages/Contact';
+import About from './Pages/AboutPage.js'
+import Portfolio from './Pages/PortfolioPage.js'
+import ResumePage from './Pages/ResumePage.js';
+import Social from './Pages/SocialPage.js';
+import Podcasting from './Pages/PodcastingPage.js';
+import Contact from './Pages/ContactPage.js';
 
 import styled from 'styled-components'
 
@@ -28,7 +28,7 @@ function App() {
                         <Route exact path='/' component={HomePage} />
                         <Route exact path='/about' component={About} />
                         <Route exact path='/portfolio' component={Portfolio} />
-                        <Route exact path='/resume' component={Resume} />
+                        <Route exact path='/resume' component={ResumePage} />
                         <Route exact path='/social' component={Social} />
                         <Route exact path='/podcasting' component={Podcasting} />
                         <Route exact path='/contact' component={Contact} />

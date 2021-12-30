@@ -16,8 +16,7 @@ const SkillBarStyles = styled.section`
 function SkillBars() {
     return (
         <SkillBarStyles>
-            <MainLayout>
-                <Title title={'Resume'} />
+                <Title title={'Skill Competency'} />
                 <InnerLayout>
                     <div className='skills'>
                         <ProgressBar
@@ -58,7 +57,6 @@ function SkillBars() {
                         />
                     </div>
                 </InnerLayout>
-            </MainLayout>
         </SkillBarStyles>
     )
 }
