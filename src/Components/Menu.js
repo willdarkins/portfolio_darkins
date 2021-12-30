@@ -23,6 +23,7 @@ const MenuStyles = styled.div`
             ul{
                 display: none;
             }
+            .portfolio-image{}
         }
     }
 `
