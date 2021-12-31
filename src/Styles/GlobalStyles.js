@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
 /* root pseudo class to create variables across styles */
     :root {
         --background: #2e344e;
-        --background-dark: #10121a;
+        --background-dark: #000f14;
         --background-light: #f1f1f1;
         --font-dark: #313131;
         --font-dark-v2: #151515;
