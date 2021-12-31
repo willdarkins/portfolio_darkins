@@ -14,7 +14,26 @@ const SocialStyles = styled.div`
                 width: 100%;
             }
             ul{
-                display: none;
+                transform: translateY(-600px);
+                transition: all .3s ease-in-out;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                opacity: 0;
+                li{
+                        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+                        border-radius: 40px;
+                        padding: .3rem;
+                        align-items: center;
+                        justify-content: center;
+                        transition: all .8s ease-in-out;
+                        a{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            transition: all .4s ease-in-out;
+                        }
+                    }
             }
             .post-image{
                 &::before{
@@ -29,11 +48,28 @@ const SocialStyles = styled.div`
             }
             .post-image:hover{
                 ul{
-                    display: block;
-                    position: absolute;
-                    left: 50%;
-                    left: 30%;
+                    transform: translateY(0);
                     transform: translate(-50%,-50% );
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: all .4s ease-in-out;
+                    opacity: 1;
+                    li{
+                        a{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            transition: all .4s ease-in-out;
+                        }
+                    }
+                    li:hover{
+                            background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+                        }
+                    svg{
+                        cursor: pointer;
+                        font-size: 6rem;
+                    }
                 }
                 &::before{
                     height: calc(100% - 5%);
