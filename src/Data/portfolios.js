@@ -36,7 +36,7 @@ const portfolios = [
         link1: 'https://github.com/willdarkins/Darkins_Note-Taker_WK-11.git',
         link2: 'https://agile-springs-22845.herokuapp.com/',
         title: 'Note Taker',
-        text: 'An application geared towards helping small business owners write and save digital notes. The functionality allows users to better organize thoughts and keep track of daily tasks in a simple, easy to navigate UI.'
+        text: 'An application geared towards helping small business owners write and save digital notes. Functionality allows users to organize thoughts and keep track of daily tasks.'
     },
     {
         id: 4,
@@ -54,7 +54,7 @@ const portfolios = [
         link1: 'https://github.com/willdarkins/API-Code-Quiz_WK4_Darkins.git',
         link2: 'https://willdarkins.github.io/API-Code-Quiz_WK4_Darkins/',
         title: 'Javascript Quiz',
-        text: 'A timed quiz that will test knowledge of basic vanilla JavaScript concepts, and track high scores to measure improvement against peers.'
+        text: 'A timed quiz that testing knowledge of basic vanilla JavaScript concepts, and tracks high scores .'
     },
     {
         id: 6,
@@ -63,7 +63,7 @@ const portfolios = [
         link1: 'https://github.com/willdarkins/Server-Side-APIs_WK6_Darkins.git',
         link2: 'https://willdarkins.github.io/Server-Side-APIs_WK6_Darkins/',
         title: 'Weather Dashboard',
-        text: 'A weather tracking application using Accuweather API to provide most updated forecasts to users. Also stores forecasts for various citites via localstorage.'
+        text: 'A weather tracking application using Accuweather API providing updated forecasts. Stores forecasts via localstorage.'
     },
     {
         id: 7,
@@ -95,7 +95,7 @@ const portfolios = [
         image:  teamBuilder,
         link1: 'https://github.com/willdarkins/Darkins_OOP-Challenge.git',
         title: 'Team Builder CLI',
-        text: 'A command line interface focused application that allows managers to easily display basic information about team members, including email and Github repositories, for quick reference on the job.'
+        text: 'A command line interface focused application allows managers to display basic information about team members.'
     },
     {
         id: 11,

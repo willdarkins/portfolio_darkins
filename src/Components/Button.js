@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import Button from '@mui/material/Button';
 
 const ButtonStyles = styled.div`
-    margin: 2.5rem auto;
+    margin: 0 auto;
+    margin-bottom: 2.5rem;
     width: 70%;
     display: flex;
     justify-content: center;
