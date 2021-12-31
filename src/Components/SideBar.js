@@ -35,23 +35,46 @@ const BarStyles = styled.div`
 `
 
 function SideBar() {
-    const [theme, setTheme] = useState('light-theme');
-    const [checked, setChecked] = useState(false)
+    // const [theme, setTheme] = useState('light-theme');
+    // const [checked, setChecked] = useState(false)
 
-    useEffect(() => {
-        //adds the conditional light or dark theme class to the root <html> in order to render certain styles
-        document.documentElement.className = theme;
-    }, [theme])
+    // useEffect(() => {
+    //     //adds the conditional light or dark theme class to the root <html> in order to render certain styles
+    //     document.documentElement.className = theme;
+    // }, [theme])
 
-    const darkToggler = () => {
-        if(theme === 'dark-theme'){
-            setTheme('light-theme')
-            setChecked(false)
-        } else{
-            setTheme('dark-theme')
-            setChecked(true)
-        }
+    // const darkToggler = () => {
+    //     if(theme === 'dark-theme'){
+    //         setTheme('light-theme')
+    //         setChecked(false)
+    //     } else{
+    //         setTheme('dark-theme')
+    //         setChecked(true)
+    //     }
+    // }
+
+    const [darkMode, setDarkMode] = useState(false);
+
+useEffect(() => {
+    const json = localStorage.getItem("site-dark-mode");
+    const currentMode = JSON.parse(json);
+    if (currentMode) {
+      setDarkMode(true);
+    } else {
+      setDarkMode(false);
     }
+  }, []);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add("dark-theme");
+    } else {
+      document.body.classList.remove("dark-theme");
+    }
+    const json = JSON.stringify(darkMode);
+    localStorage.setItem("site-dark-mode", json);
+  }, [darkMode]);
+
 
     return (
         <BarStyles>
@@ -62,10 +85,10 @@ function SideBar() {
                 <div className='right-content'>
                     <Switch
                         value=''
-                        checked={checked}
+                        // checked={checked}
                         inputProps={{ 'aria-label': 'controlled' }}
                         size='large'
-                        onClick={darkToggler}
+                        onClick={() => setDarkMode(!darkMode)}
                     />
                 </div>
             </div>

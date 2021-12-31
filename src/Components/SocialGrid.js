@@ -6,6 +6,10 @@ const SocialStyles = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
+    .post-image{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
     .grid-item{
         .post-content{
             display: block;
