@@ -39,6 +39,7 @@ function SideBar() {
     const [checked, setChecked] = useState(false)
 
     useEffect(() => {
+        //adds the conditional light or dark theme class to the root <html> in order to render certain styles
         document.documentElement.className = theme;
     }, [theme])
 
