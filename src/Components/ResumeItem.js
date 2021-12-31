@@ -21,7 +21,7 @@ const ItemStyles = styled.div`
             width: 15px;
             border-radius: 50%;
             border: 2px solid var(--border);
-            background-color: #FFFFFF;
+            background-color:  var(--border);
         }
         p{
             display: inline-block;

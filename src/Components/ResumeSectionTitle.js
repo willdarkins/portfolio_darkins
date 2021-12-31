@@ -17,7 +17,6 @@ const SectionTitleStyles = styled.div`
 
     }
 `
-
 //props passed
 function ResumeSectionTitle({icon, title}) {
     return (
