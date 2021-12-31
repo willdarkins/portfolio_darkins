@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import {MainLayout, InnerLayout} from '../Styles/Layout'
+import { MainLayout, InnerLayout } from '../Styles/Layout'
 import Title from '../Components/Title'
 import portfolios from '../Data/portfolios'
 import Menu from '../Components/Menu'

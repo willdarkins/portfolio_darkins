@@ -1,5 +1,5 @@
 import bamaTitle from '../Images/social/bamaTitle.jpg'
-import carollWilsonSeattle from '../Images/socialcarollWilsonSeattle.jpg'
+import carollWilsonSeattle from '../Images/social/carollWilsonSeattle.jpg'
 import cjTarget from '../Images/social/cjTarget.jpg'
 import dameArmsUp from '../Images/social/dameArmsUp.jpg'
 import dameNowWhat from '../Images/social/dameNowWhat.jpg'
