@@ -16,8 +16,12 @@ const SkillStyles = styled.section`
         .mid-card{
             margin: 0 1.2rem;
         }
+        svg{
+            color: var(--font-dark);
+        }
     }
 `
+
 
 function Skills() {
     return (

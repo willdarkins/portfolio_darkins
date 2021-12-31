@@ -24,9 +24,10 @@ const HomeStyles = styled.header`
         
         h1{
             padding-bottom: 2rem;
+            color: var(--font-dark);
         } 
         p{
-            color: var(--background-dark);
+            color: var(--font-dark);
         }
         .icon-list{
             display: flex;
@@ -35,7 +36,7 @@ const HomeStyles = styled.header`
             .icon{
                 cursor: pointer;
                 padding: 0 1rem 0 1rem; 
-                color: var(--background-dark);
+                color: var(--font-dark);
                 align-items: center;
                 display: flex;
                 justify-content: center;

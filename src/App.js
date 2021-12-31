@@ -10,6 +10,7 @@ import Podcasting from './Pages/PodcastingPage.js';
 import Contact from './Pages/ContactPage.js';
 import styled from 'styled-components'
 
+
 //styles to be applied to main content section on the app... this is everything but the SibeBar and Nav
 const MainStyles = styled.main`
     position: relative;
@@ -18,6 +19,7 @@ const MainStyles = styled.main`
 
 `
 function App() {
+    
     return (
         <>
             <Router forceRefresh>

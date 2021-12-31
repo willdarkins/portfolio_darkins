@@ -49,12 +49,12 @@ const MenuStyles = styled.div`
         }
         li:hover{
             svg{
-                color: var('white');
+                color: var(--font-light);
             }
         }
         svg{
             cursor: pointer;
-            color: white;
+            color: var(--font-light);
             font-size: 2rem;
             }
         }

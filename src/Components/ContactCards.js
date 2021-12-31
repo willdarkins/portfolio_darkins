@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const CardStyles = styled.div`
     padding: 1.5rem 2rem;
-    background-color: #ffff ;
+    background-color: var(--dark-card) ;
     color: var(--font-dark);
     display: flex;
     align-items: center;

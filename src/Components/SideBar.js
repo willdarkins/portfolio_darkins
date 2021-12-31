@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import Nav from './Nav'
 import Switch from '@mui/material/Switch';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 // styles variable from styled-components dependency applied to SideBar
 const BarStyles = styled.div`
@@ -33,6 +35,23 @@ const BarStyles = styled.div`
 `
 
 function SideBar() {
+    const [theme, setTheme] = useState('light-theme');
+    const [checked, setChecked] = useState(false)
+
+    useEffect(() => {
+        document.documentElement.className = theme;
+    }, [theme])
+
+    const darkToggler = () => {
+        if(theme === 'dark-theme'){
+            setTheme('light-theme')
+            setChecked(false)
+        } else{
+            setTheme('dark-theme')
+            setChecked(true)
+        }
+    }
+
     return (
         <BarStyles>
             <div className='light-dark-mode'>
@@ -42,10 +61,10 @@ function SideBar() {
                 <div className='right-content'>
                     <Switch
                         value=''
-                        // checked={checked}
-                        // onChange={handleChange}
+                        checked={checked}
                         inputProps={{ 'aria-label': 'controlled' }}
                         size='large'
+                        onClick={darkToggler}
                     />
                 </div>
             </div>

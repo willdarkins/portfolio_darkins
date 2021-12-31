@@ -6,6 +6,8 @@ import { margin } from '@mui/system';
 
 const ContactCardStyles = styled.div`
     .card{
+        color: var(--font-dark);
+        background: var(--dark-card);
         box-shadow: 8px 8px 8px 8px rgba(0,0,0,0.2);
         transition: 0.3s;
         padding: 1.2rem;
@@ -13,6 +15,9 @@ const ContactCardStyles = styled.div`
     .card:hover{
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     }
+   p{
+       margin-bottom: 1rem;
+   }
 `
 
 function ContactForm() {
@@ -25,7 +30,7 @@ function ContactForm() {
                     <form>
                         <Grid container spacing={1}>
                             <Grid xs={12} sm={6} item>
-                                <TextField type='text' label='First Name' placeholder='First Name' variant='outlined' fullWidth required />
+                                <TextField className={'text-field'} type='text' label='First Name' placeholder='First Name' variant='outlined' fullWidth required/>
                             </Grid>
                             <Grid xs={12} sm={6} item>
                                 <TextField type='text' label='Last Name' placeholder='Last Name' variant='outlined' fullWidth required />

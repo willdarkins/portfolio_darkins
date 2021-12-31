@@ -13,23 +13,56 @@ const GlobalStyle = createGlobalStyle`
         font-size: 1rem;
     }
 /* root pseudo class to create variables across styles */
-    :root {
-        --background: #2e344e;
+:root {
+        --background: #ffffff;
         --background-dark: #000f14;
         --background-light: #f1f1f1;
-        --font-dark: #313131;
+        --font-dark: #151515;
         --font-dark-v2: #151515;
-        --font-light: #F9F6EE;
+        --font-light: #f9f6ee;
         --sidebar: #002838;
         --border: #0ea84c;
         --primary: #007bff;
         --secondary: #6c757d;
         --blue: #247cc4;
+	    --white: #ffffff;
+	    --dark-card: #ffffff
+    }
+    .light-theme {
+        --background: #ffffff;
+        --background-dark: #000f14;
+        --background-light: #f1f1f1;
+        --font-dark: #151515;
+        --font-dark-v2: #151515;
+        --font-light: #f9f6ee;
+        --sidebar: #002838;
+        --border: #0ea84c;
+        --primary: #007bff;
+        --secondary: #6c757d;
+        --blue: #247cc4;
+	    --white: #ffffff;
+	    --dark-card: #ffffff
+    }
+
+    .dark-theme{
+        --background: #000f14;
+        --background-dark: #000f14;
+        --background-light: #f1f1f1;
+        --font-dark: #ebf1ff;
+        --font-dark-v2: #151515;
+        --font-light: #ebf1ff;
+        --sidebar: #002838;
+        --border: #0ea84c;
+        --primary: #007bff;
+        --secondary: #6c757d;
+        --blue: #247cc4;
+        --white: #ffffff;
+        --dark-card: #002838
     }
 
     body {
         color: var(--font-light);
-        background-color: var(--background-color)
+        background-color: var(--background)
     }
 
     a {
