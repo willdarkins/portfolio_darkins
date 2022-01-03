@@ -3,9 +3,9 @@ import styled from 'styled-components'
 import { InnerLayout } from '../Styles/Layout'
 import Title from './Title'
 import ServiceCard from '../Components/ServiceCard'
-import fullstack from '../Images/fullstack.svg'
-import photoshop from '../Images/photoshop.svg'
-import microphone from '../Images/podcasting.svg'
+import DeveloperBoardIcon from '@mui/icons-material/DeveloperBoard';
+import DesignServicesIcon from '@mui/icons-material/DesignServices';
+import PodcastsIcon from '@mui/icons-material/Podcasts';
 
 const SkillStyles = styled.section`
     .services{
@@ -21,7 +21,9 @@ const SkillStyles = styled.section`
         }
     }
 `
-
+const develop = <DeveloperBoardIcon />
+const design = <DesignServicesIcon />
+const podcast = <PodcastsIcon />
 
 function Skills() {
     return (
@@ -30,19 +32,19 @@ function Skills() {
                 <Title title={'Skills'} />
                 <div className='services'>
                     <ServiceCard
-                        image={fullstack}
+                        icon={develop}
                         title={'Full-Stack Development'}
                         paragraph={' This is some bullshit information about me and things that I do so people will think I know This is some bullshit information about me and things that I do so people will think I know'}
                     />
                     <div className='mid-card'>
                         <ServiceCard
-                            image={photoshop}
-                            title={'Photoshop'}
+                            icon={design}
+                            title={'Graphic Design'}
                             paragraph={' This is some bullshit information about me and things that I do so people will think I know This is some bullshit information about me and things that I do so people will think I know'}
                         />
                     </div>
                     <ServiceCard
-                        image={microphone}
+                        icon={podcast}
                         title={'Podcasting/Audio Design'}
                         paragraph={' This is some bullshit information about me and things that I do so people will think I know This is some bullshit information about me and things that I do so people will think I know'}
                     />

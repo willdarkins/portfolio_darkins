@@ -41,6 +41,9 @@ const InfoStyles = styled.div`
     }
         .Button{
             padding-top: 3rem;
+            a{
+                font-size: 1rem;
+            }
         }
     
 `
@@ -76,7 +79,8 @@ function BasicInfo() {
                 </div>
                 <div className='Button'>
                     <Button variant="contained" size="large">
-                        Get in Contact, Now!
+                       <a href='https://docs.google.com/document/d/1uLVe2rlOxss92WbZRckPIwKWaXXrb6mQRbAsTXHgVSE/edit' target='_blank' rel='noopener noreferrer'>
+                           View Full CV </a>
                     </Button>
                 </div>
             </div>

@@ -21,9 +21,6 @@ const ContactStyles = styled.section`
             flex-direction: column;
         }
     }
-    .material-contact-form{
-        
-    }
 `
 
 //creating variables to attribute Material UI icon imports in order to render them in ContactPage.js

@@ -2,7 +2,7 @@ import React from 'react'
 import { Card, CardContent, Grid, TextField, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
 import styled from 'styled-components';
-import { margin } from '@mui/system';
+
 
 const ContactCardStyles = styled.div`
     .card{
@@ -18,6 +18,7 @@ const ContactCardStyles = styled.div`
    p{
        margin-bottom: 1rem;
    }
+
 `
 
 function ContactForm() {
@@ -30,19 +31,19 @@ function ContactForm() {
                     <form>
                         <Grid container spacing={1}>
                             <Grid xs={12} sm={6} item>
-                                <TextField className={'text-field'} type='text' label='First Name' placeholder='First Name' variant='outlined' fullWidth required/>
+                                <TextField InputLabelProps={{style: { color: 'var(--font-dark)' },}} type='text' label='First Name' placeholder='First Name' variant='outlined' fullWidth required/>
                             </Grid>
                             <Grid xs={12} sm={6} item>
-                                <TextField type='text' label='Last Name' placeholder='Last Name' variant='outlined' fullWidth required />
+                                <TextField InputLabelProps={{style: { color: 'var(--font-dark)' },}} type='text' label='Last Name' placeholder='Last Name' variant='outlined' fullWidth required />
                             </Grid>
                             <Grid xs={12} item>
-                                <TextField type='email' label='Email' placeholder='Enter Email' variant='outlined' fullWidth required />
+                                <TextField InputLabelProps={{style: { color: 'var(--font-dark)' },}} type='email' label='Email' placeholder='Enter Email' variant='outlined' fullWidth required />
                             </Grid>
                             <Grid xs={12} item>
-                                <TextField type='number' label='Phone #' placeholder='Enter Your Phone #' variant='outlined' fullWidth required />
+                                <TextField InputLabelProps={{style: { color: 'var(--font-dark)' },}} type='number' label='Phone #' placeholder='Enter Your Phone #' variant='outlined' fullWidth required />
                             </Grid>
                             <Grid xs={12} item>
-                                <TextField type='text' label='Message' multiline rows={4} placeholder='Type Message Here' variant='outlined' fullWidth required />
+                                <TextField InputLabelProps={{style: { color: 'var(--font-dark)' },}} type='text' label='Message' multiline rows={4} placeholder='Type Message Here' variant='outlined' fullWidth required />
                             </Grid>
                             <Grid xs={12} item>
                                 <Button type='submit' color='primary' variant='contained' fullWidth>Submit</Button>

@@ -1,12 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
+import DeveloperBoardIcon from '@mui/icons-material/DeveloperBoard';
+import DesignServicesIcon from '@mui/icons-material/DesignServices';
+import PodcastsIcon from '@mui/icons-material/Podcasts';
 
 const CardStyles = styled.div`
     margin: 0 1rem;
+    background-color: var(--dark-card) ;
+    cursor: pointer;
     .container{
-        box-shadow: 8px 8px 8px 8px rgba(0,0,0,0.2);
+        box-shadow: 5px 10px 18px #888888;
         transition: 0.3s;
         padding: 1.2rem;
+        svg{
+            font-size: 5rem; 
+        }
     }
     .container:hover{
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -18,7 +26,7 @@ const CardStyles = styled.div`
         &::after{
             content: '';
             width: 4rem;
-            background-color: var(--background);
+            background-color: var(--border);
             height: 4px;
             position: absolute;
             left: 0;
@@ -31,14 +39,17 @@ const CardStyles = styled.div`
 
     }
 `
+const develop = <DeveloperBoardIcon />
+const design = <DesignServicesIcon />
+const podcast = <PodcastsIcon />
 
 
 //passing props for info that will be displayed on each of the core skills listed on the About Page
-function ServiceCard({ image, title, paragraph }) {
+function ServiceCard({ icon, title, paragraph }) {
     return (
         <CardStyles>
             <div className='container'>
-                <img src={image} alt='' />
+                <p>{icon}</p>
                 <h4>{title}</h4>
                 <p>{paragraph}</p>
             </div>
