@@ -10,16 +10,19 @@ import Podcasting from './Pages/PodcastingPage.js';
 import Contact from './Pages/ContactPage.js';
 import styled from 'styled-components'
 
-
 //styles to be applied to main content section on the app... this is everything but the SibeBar and Nav
 const MainStyles = styled.main`
     position: relative;
     margin-left: 16rem;
     min-height: 100vh;
-
+    .p-particles-js{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 `
 function App() {
-    
+
     return (
         <>
             <Router forceRefresh>

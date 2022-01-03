@@ -3,8 +3,7 @@ import styled from 'styled-components'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import LinkedinIcon from '@material-ui/icons/LinkedIn'
 import { Icon } from '@iconify/react';
-// import Background from '../Images/home-background.jpg'
-// import particlesConfig from '../Config/particle-config'
+
 
 //styles variable from styled-components dependency applied to HomePage component
 const HomeStyles = styled.header`
@@ -49,15 +48,6 @@ const HomeStyles = styled.header`
     }
 `
 function HomePage() {
-    const particlesInit = (main) => {
-        console.log(main);
-
-        // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
-    };
-
-    const particlesLoaded = (container) => {
-        console.log(container);
-    };
     return (
         <HomeStyles>
             <div className='intro'>
