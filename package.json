@@ -11,6 +11,7 @@
     "@mui/icons-material": "^5.2.4",
     "@mui/material": "^5.2.4",
     "@mui/styled-engine-sc": "^5.1.0",
+    "@sendgrid/mail": "^7.6.0",
     "@testing-library/user-event": "^13.5.0",
     "body-parser": "^1.19.1",
     "concurrently": "^7.0.0",
