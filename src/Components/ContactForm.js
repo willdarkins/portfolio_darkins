@@ -70,7 +70,7 @@ function ContactForm() {
                                 <TextField InputLabelProps={{style: { color: 'var(--font-dark)' },}} type='text' label='Message' multiline rows={4} placeholder='Type Message Here' variant='outlined' fullWidth required htmlFor='message' />
                             </Grid>
                             <Grid xs={12} item>
-                                <Button type='submit' color='primary' variant='contained' fullWidth>{setStatus}</Button>
+                                <Button type='submit' color='primary' variant='contained' fullWidth>{status}</Button>
                             </Grid>
                         </Grid>
                     </form>
