@@ -37,7 +37,8 @@ const BarStyles = styled.div`
 function SideBar() {
     const [darkMode, setDarkMode] = useState(false);
     const [checked, setChecked] = useState(false)
-useEffect(() => {
+  
+    useEffect(() => {
     const json = localStorage.getItem("site-dark-mode");
     const currentMode = JSON.parse(json);
     if (currentMode) {
