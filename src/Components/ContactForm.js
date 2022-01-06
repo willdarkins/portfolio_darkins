@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Card, CardContent, Grid, TextField, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
 import styled from 'styled-components';
@@ -23,24 +23,31 @@ const ContactCardStyles = styled.div`
 
 function ContactForm() {
 
+    const [first, setFirst] = useState('');
+    const [last, setLast] = useState('');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+    const [message, setMessage] = useState('');
+
     const [status, setStatus] = useState("Submit");
     const handleSubmit = async (e) => {
       e.preventDefault();
       setStatus("Sending...");
-      const { firstname, lastname, email, phone, message } = e.target.elements;
+    const { first, last, email, phone, message } = e.target.elements;
       let details = {
-        firstname: firstname.value,
-        lastname: lastname.value,
-        email: email.value,
-        phone: phone.value,
-        message: message.value,
+        firstname: first,
+        lastname: last,
+        email: email,
+        phone: phone,
+        message: message,
       };
+      console.log(details)
       let response = await fetch("http://localhost:5000/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json;charset=utf-8",
         },
-        body: JSON.stringify(details),
+        body: JSON.stringify({details}),
       });
       setStatus("Submit");
       let result = await response.json();
@@ -55,19 +62,65 @@ function ContactForm() {
                     <form onSubmit={handleSubmit}>
                         <Grid container spacing={1}>
                             <Grid xs={12} sm={6} item>
-                                <TextField InputLabelProps={{style: { color: 'var(--font-dark)' },}} type='text' label='First Name' placeholder='First Name' variant='outlined' fullWidth required htmlFor='firstname' />
+                                <TextField
+                                onChange={(e) => setFirst(e.target.value)}
+                                InputLabelProps={{style: { color: 'var(--font-dark)' },}}
+                                type='text'
+                                label='First Name'
+                                placeholder='First Name'
+                                variant='outlined'
+                                fullWidth
+                                required
+                                htmlFor='firstname' />
                             </Grid>
                             <Grid xs={12} sm={6} item>
-                                <TextField InputLabelProps={{style: { color: 'var(--font-dark)' },}} type='text' label='Last Name' placeholder='Last Name' variant='outlined' fullWidth required htmlFor='lastname' />
+                                <TextField
+                                onChange={(e) => setLast(e.target.value)}
+                                InputLabelProps={{style: { color: 'var(--font-dark)' },}}
+                                type='text'
+                                label='Last Name'
+                                placeholder='Last Name'
+                                variant='outlined'
+                                fullWidth
+                                required 
+                                htmlFor='lastname' />
                             </Grid>
                             <Grid xs={12} item>
-                                <TextField InputLabelProps={{style: { color: 'var(--font-dark)' },}} type='email' label='Email' placeholder='Enter Email' variant='outlined' fullWidth required htmlFor='email' />
+                                <TextField 
+                                onChange={(e) => setEmail(e.target.value)}
+                                InputLabelProps={{style: { color: 'var(--font-dark)' },}}
+                                type='email'
+                                label='Email'
+                                placeholder='Enter Email'
+                                variant='outlined'
+                                fullWidth
+                                required
+                                htmlFor='email' />
                             </Grid>
                             <Grid xs={12} item>
-                                <TextField InputLabelProps={{style: { color: 'var(--font-dark)' },}} type='number' label='Phone #' placeholder='Enter Your Phone #' variant='outlined' fullWidth required htmlFor='phone' />
+                                <TextField
+                                onChange={(e) => setPhone(e.target.value)}
+                                InputLabelProps={{style: { color: 'var(--font-dark)' },}}
+                                type='number'
+                                label='Phone #'
+                                placeholder='Enter Your Phone #'
+                                variant='outlined'
+                                fullWidth
+                                required
+                                htmlFor='phone' />
                             </Grid>
                             <Grid xs={12} item>
-                                <TextField InputLabelProps={{style: { color: 'var(--font-dark)' },}} type='text' label='Message' multiline rows={4} placeholder='Type Message Here' variant='outlined' fullWidth required htmlFor='message' />
+                                <TextField
+                                onChange={(e) => setMessage(e.target.value)}
+                                InputLabelProps={{style: { color: 'var(--font-dark)' },}}
+                                type='text'
+                                label='Message'
+                                multiline rows={4}
+                                placeholder='Type Message Here'
+                                variant='outlined'
+                                fullWidth
+                                required
+                                htmlFor='message' />
                             </Grid>
                             <Grid xs={12} item>
                                 <Button type='submit' color='primary' variant='contained' fullWidth>{status}</Button>
