@@ -3,7 +3,6 @@ import { Grid, Button, Typography, Avatar } from '@material-ui/core'
 import styled from 'styled-components';
 import ClearIcon from '@mui/icons-material/Clear';
 import FANProfilePic from '../Images/avatar_FAN.jpg'
-import Paper from '@mui/material/Paper';
 
 const InstaCardStyles = styled.div`
     .main{
@@ -33,7 +32,9 @@ const InstaCardStyles = styled.div`
         text-transform: none;
         padding-left: 1rem;
         padding-right: 1rem;
-
+        a{
+            font-size: .9rem;
+        }
     }
 `
 
@@ -83,8 +84,9 @@ const ProfileName = () => {
 }
 const FollowButton = () => {
     return (
-        <Button disableElevation color= "primary" variant='contained' size='small' className='button'>
-            Follow
+        <Button color= "primary" variant='contained' size='small' className='button'>
+            <a href='https://www.instagram.com/1080thefan/?hl=en' target='_blank' rel='noopener noreferrer'>
+                           Follow </a>
         </Button> 
     )
 }
