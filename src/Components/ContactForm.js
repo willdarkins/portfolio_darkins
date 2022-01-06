@@ -3,7 +3,6 @@ import { Card, CardContent, Grid, TextField, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
 import styled from 'styled-components';
 
-
 const ContactCardStyles = styled.div`
     .card{
         color: var(--font-dark);
@@ -20,7 +19,6 @@ const ContactCardStyles = styled.div`
    }
 
 `
-
 function ContactForm() {
 
     const [first, setFirst] = useState('');

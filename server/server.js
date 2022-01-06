@@ -1,6 +1,5 @@
 const express = require('express');
 
-//middleware that allows client/server relationship to wrok better
 const cors = require('cors');
 
 const nodemailer = require("nodemailer");
@@ -11,7 +10,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const PORT = process.env.PORT || 5000
-
 
 const contactEmail = nodemailer.createTransport({
   service: 'gmail',
@@ -55,6 +53,5 @@ app.post("/contact", (req, res) => {
     }
   });
 });
-
 
 app.listen(PORT, () => console.log(`🌍 Now listening on localhost:${PORT}`))
