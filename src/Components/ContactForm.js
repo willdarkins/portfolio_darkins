@@ -33,7 +33,7 @@ function ContactForm() {
     const handleSubmit = async (e) => {
       e.preventDefault();
       setStatus("Sending...");
-    const { first, last, email, phone, message } = e.target.elements;
+    // const { first, last, email, phone, message } = e.target.elements;
       let details = {
         firstname: first,
         lastname: last,
@@ -47,7 +47,7 @@ function ContactForm() {
         headers: {
           "Content-Type": "application/json;charset=utf-8",
         },
-        body: JSON.stringify({details}),
+        body: JSON.stringify(details),
       });
       setStatus("Submit");
       let result = await response.json();
