@@ -52,7 +52,7 @@ function ServiceCard({ icon, title, paragraph }) {
             whileHover={{
                 scale: 1.15,
                 transition: {
-                    duration: .2
+                    duration: .3
                 }
             }}
             className='container'>
