@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, useLocation } from 'react-router-dom';
 import SideBar from './Components/SideBar'
 import HomePage from './Pages/HomePage'
 import About from './Pages/AboutPage.js'
@@ -24,14 +24,14 @@ const MainStyles = styled.main`
     }
 `
 function App() {
-
+const location = useLocation()
     return (
         <>
             <Router forceRefresh>
                 <SideBar />
                 <MainStyles>
                     <AnimatePresence exitBeforeEnter>
-                        <Switch>
+                        <Switch location={location} key={location.pathname}>
                             <Route exact path='/' component={HomePage} />
                             <Route exact path='/about' component={About} />
                             <Route exact path='/portfolio' component={Portfolio} />

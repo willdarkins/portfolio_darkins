@@ -41,7 +41,7 @@ function Contact() {
                     scale: 1,
                     opacity: 1,
                     transition: {
-                        delay: .4
+                        delay: .2
                     }
                 },
             }}>

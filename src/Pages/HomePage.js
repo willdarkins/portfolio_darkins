@@ -6,10 +6,9 @@ import { Icon } from '@iconify/react';
 import { motion } from 'framer-motion';
 
 const pageTransitions = {
-    initial: { opacity: 0},
-    animate: { opacity: 1},
-    exit: { opacity: 0},
-    transition: { duration: 0.5 }
+    initial: { opacity: 0, x: 100, y: "-50%" },
+    animate: { opacity: 1, x: "-50%", y: "-50%" },
+    exit: { opacity: 0, x: -100, y: "-50%" }
 }
 
 //styles variable from styled-components dependency applied to HomePage component
@@ -56,35 +55,39 @@ const HomeStyles = styled.header`
 `
 function HomePage() {
     return (
+
         <HomeStyles>
             <motion.div
-            exit="exit"
-            animate="animate"
-            initial="initial"
-            transition="transition"
-            variants={pageTransitions}
-            className='intro'>
-                <h1 as={motion.div} drag animate={{ fontSize: 50}} color='#ff'>👋 Hi there! I'm <span>Will Darkins</span></h1>
-                <p>
-                    This is some bullshit information about me and things that I do so people will think I know
-                    what I'm doing on daily basis. This blurb will go on three more times. This is some bullshit information about me and things that I do so people will think I know
-                    what I'm doing on daily basis. This blurb will go on three more times. This is some bullshit information about me and things that I do so people will think I know
-                    what I'm doing on daily basis. This blurb will go on three more times. This is some bullshit information about me and things that I do so people will think I know
-                    what I'm doing on daily basis. This blurb will go on three more times.
-                </p>
-                <div className='icon-list'>
-                    <a href='https://www.linkedin.com/in/will-darkins-827368b2/' className='icon' target="_blank" >
-                        <LinkedinIcon style={{ fontSize: 40 }} />
-                    </a>
-                    <a href='https://github.com/willdarkins' className='icon' target="_blank">
-                        <GitHubIcon style={{ fontSize: 40 }} />
-                    </a>
-                    <a href='https://vimeo.com/user156064740' className='icon' target="_blank">
-                        <Icon icon="mdi:vimeo" style={{ fontSize: 40 }} />
-                    </a>
+                exit="exit"
+                animate="animate"
+                initial="initial"
+                variants={pageTransitions}
+                transition={{ duration: 0.8 }}
+                className='intro'>
+                <div className='intro'>
+                    <h1 as={motion.div} drag animate={{ fontSize: 50 }} color='#ff'>👋 Hi there! I'm <span>Will Darkins</span></h1>
+                    <p>
+                        This is some bullshit information about me and things that I do so people will think I know
+                        what I'm doing on daily basis. This blurb will go on three more times. This is some bullshit information about me and things that I do so people will think I know
+                        what I'm doing on daily basis. This blurb will go on three more times. This is some bullshit information about me and things that I do so people will think I know
+                        what I'm doing on daily basis. This blurb will go on three more times. This is some bullshit information about me and things that I do so people will think I know
+                        what I'm doing on daily basis. This blurb will go on three more times.
+                    </p>
+                    <div className='icon-list'>
+                        <a href='https://www.linkedin.com/in/will-darkins-827368b2/' className='icon' target="_blank" >
+                            <LinkedinIcon style={{ fontSize: 40 }} />
+                        </a>
+                        <a href='https://github.com/willdarkins' className='icon' target="_blank">
+                            <GitHubIcon style={{ fontSize: 40 }} />
+                        </a>
+                        <a href='https://vimeo.com/user156064740' className='icon' target="_blank">
+                            <Icon icon="mdi:vimeo" style={{ fontSize: 40 }} />
+                        </a>
+                    </div>
                 </div>
             </motion.div>
         </HomeStyles>
+
     )
 }
 

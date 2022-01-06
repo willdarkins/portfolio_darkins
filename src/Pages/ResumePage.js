@@ -7,11 +7,19 @@ import { motion } from 'framer-motion';
 function ResumePage() {
     return (
         <MainLayout>
-            <motion.div
-                exit={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                initial={{ opacity: 0 }}
-                className='intro'>
+            <motion.div initial="hidden" animate="visible" variants={{
+                hidden: {
+                    scale: .8,
+                    opacity: 0
+                },
+                visible: {
+                    scale: 1,
+                    opacity: 1,
+                    transition: {
+                        delay: .2
+                    }
+                },
+            }}>
                 <SkillBars />
                 <Resume />
             </motion.div>

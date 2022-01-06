@@ -12,11 +12,19 @@ const AboutStyles = styled.section`
 function About() {
     return (
         <MainLayout>
-            <motion.div
-                exit={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                initial={{ opacity: 0 }}
-                className='intro'>
+            <motion.div initial="hidden" animate="visible" variants={{
+                hidden: {
+                    scale: .8,
+                    opacity: 0
+                },
+                visible: {
+                    scale: 1,
+                    opacity: 1,
+                    transition: {
+                        delay: .2
+                    }
+                },
+            }}>
                 <AboutStyles>
                     {/* props to be passed to Title component */}
                     <Title title={'About'} />
