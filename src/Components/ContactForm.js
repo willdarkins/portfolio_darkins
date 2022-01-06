@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { Card, CardContent, Grid, TextField, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
 
 const ContactCardStyles = styled.div`
     .card{
@@ -30,31 +29,31 @@ function ContactForm() {
 
     const [status, setStatus] = useState("Submit");
     const handleSubmit = async (e) => {
-      e.preventDefault();
-      setStatus("Sending...");
-    // const { first, last, email, phone, message } = e.target.elements;
-      let details = {
-        firstname: first,
-        lastname: last,
-        email: email,
-        phone: phone,
-        message: message,
-      };
-      console.log(details)
-      let response = await fetch("http://localhost:5000/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json;charset=utf-8",
-        },
-        body: JSON.stringify(details),
-      });
-      setStatus("Submit");
-      let result = await response.json();
-      alert(result.status);
-    };    
+        e.preventDefault();
+        setStatus("Sending...");
+
+        let details = {
+            firstname: first,
+            lastname: last,
+            email: email,
+            phone: phone,
+            message: message,
+        };
+
+        let response = await fetch("http://localhost:5000/contact", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json;charset=utf-8",
+            },
+            body: JSON.stringify(details),
+        });
+        setStatus("Submit");
+        let result = await response.json();
+        alert(result.status);
+    };
     return (
         <ContactCardStyles>
-            <Card style={{maxWidth:535, margin:'0 auto'}} className={'card'}>
+            <Card style={{ maxWidth: 535, margin: '0 auto' }} className={'card'}>
                 <CardContent>
                     <Typography gutterBottom variant='h5'>Reach out and say hello!</Typography>
                     <Typography gutterBottom variant='body2' color='textsecondary' component='p'>I'll respond ASAP to questions and work inquires</Typography>
@@ -62,68 +61,68 @@ function ContactForm() {
                         <Grid container spacing={1}>
                             <Grid xs={12} sm={6} item>
                                 <TextField
-                                onChange={(e) => setFirst(e.target.value)}
-                                InputLabelProps={{style: { color: 'var(--font-dark)' },}}
-                                type='text'
-                                label='First Name'
-                                placeholder='First Name'
-                                variant='outlined'
-                                fullWidth
-                                required
-                                htmlFor='firstname' />
+                                    onChange={(e) => setFirst(e.target.value)}
+                                    InputLabelProps={{ style: { color: 'var(--font-dark)' }, }}
+                                    type='text'
+                                    label='First Name'
+                                    placeholder='First Name'
+                                    variant='outlined'
+                                    fullWidth
+                                    required
+                                    htmlFor='firstname' />
                             </Grid>
                             <Grid xs={12} sm={6} item>
                                 <TextField
-                                onChange={(e) => setLast(e.target.value)}
-                                InputLabelProps={{style: { color: 'var(--font-dark)' },}}
-                                type='text'
-                                label='Last Name'
-                                placeholder='Last Name'
-                                variant='outlined'
-                                fullWidth
-                                required 
-                                htmlFor='lastname' />
-                            </Grid>
-                            <Grid xs={12} item>
-                                <TextField 
-                                onChange={(e) => setEmail(e.target.value)}
-                                InputLabelProps={{style: { color: 'var(--font-dark)' },}}
-                                type='email'
-                                label='Email'
-                                placeholder='Enter Email'
-                                variant='outlined'
-                                fullWidth
-                                required
-                                htmlFor='email' />
+                                    onChange={(e) => setLast(e.target.value)}
+                                    InputLabelProps={{ style: { color: 'var(--font-dark)' }, }}
+                                    type='text'
+                                    label='Last Name'
+                                    placeholder='Last Name'
+                                    variant='outlined'
+                                    fullWidth
+                                    required
+                                    htmlFor='lastname' />
                             </Grid>
                             <Grid xs={12} item>
                                 <TextField
-                                onChange={(e) => setPhone(e.target.value)}
-                                InputLabelProps={{style: { color: 'var(--font-dark)' },}}
-                                type='number'
-                                label='Phone #'
-                                placeholder='Enter Your Phone #'
-                                variant='outlined'
-                                fullWidth
-                                required
-                                htmlFor='phone' />
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    InputLabelProps={{ style: { color: 'var(--font-dark)' }, }}
+                                    type='email'
+                                    label='Email'
+                                    placeholder='Enter Email'
+                                    variant='outlined'
+                                    fullWidth
+                                    required
+                                    htmlFor='email' />
                             </Grid>
                             <Grid xs={12} item>
                                 <TextField
-                                onChange={(e) => setMessage(e.target.value)}
-                                InputLabelProps={{style: { color: 'var(--font-dark)' },}}
-                                type='text'
-                                label='Message'
-                                multiline rows={4}
-                                placeholder='Type Message Here'
-                                variant='outlined'
-                                fullWidth
-                                required
-                                htmlFor='message' />
+                                    onChange={(e) => setPhone(e.target.value)}
+                                    InputLabelProps={{ style: { color: 'var(--font-dark)' }, }}
+                                    type='number'
+                                    label='Phone #'
+                                    placeholder='Enter Your Phone #'
+                                    variant='outlined'
+                                    fullWidth
+                                    required
+                                    htmlFor='phone' />
                             </Grid>
                             <Grid xs={12} item>
-                                <Button 
-                                type='submit' color='primary' variant='contained' fullWidth>{status}</Button>
+                                <TextField
+                                    onChange={(e) => setMessage(e.target.value)}
+                                    InputLabelProps={{ style: { color: 'var(--font-dark)' }, }}
+                                    type='text'
+                                    label='Message'
+                                    multiline rows={4}
+                                    placeholder='Type Message Here'
+                                    variant='outlined'
+                                    fullWidth
+                                    required
+                                    htmlFor='message' />
+                            </Grid>
+                            <Grid xs={12} item>
+                                <Button
+                                    type='submit' color='primary' variant='contained' fullWidth>{status}</Button>
                             </Grid>
                         </Grid>
                     </form>
