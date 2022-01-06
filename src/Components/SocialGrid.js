@@ -98,7 +98,6 @@ function SocialGrid({ post }) {
                         <div className='post-content'>
                             <div className='post-image'>
                                 <img src={i.image} alt='' />
-
                                 <ul>
                                     <li>
                                         <a href={i.link} target='_blank' rel='noopener noreferrer'>

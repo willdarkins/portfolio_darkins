@@ -4,6 +4,7 @@ import { MainLayout, InnerLayout } from '../Styles/Layout'
 import Title from '../Components/Title'
 import socialPosts from '../Data/socialPosts'
 import SocialGrid from '../Components/SocialGrid'
+import { InstagramCard } from '../Components/InstagramCard'
 import { motion } from 'framer-motion';
 
 function Social() {
@@ -24,6 +25,7 @@ function Social() {
                 },
             }}>
                 <Title title={'Social'} />
+                <InstagramCard />
                 <InnerLayout>
                     <SocialGrid post={post} />
                 </InnerLayout>
