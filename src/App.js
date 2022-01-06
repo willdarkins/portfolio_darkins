@@ -30,7 +30,7 @@ function App() {
             <Router forceRefresh>
                 <SideBar />
                 <MainStyles>
-                    <AnimatePresence>
+                    <AnimatePresence exitBeforeEnter>
                         <Switch>
                             <Route exact path='/' component={HomePage} />
                             <Route exact path='/about' component={About} />

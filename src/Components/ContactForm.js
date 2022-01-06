@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Card, CardContent, Grid, TextField, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const ContactCardStyles = styled.div`
     .card{
@@ -121,7 +122,8 @@ function ContactForm() {
                                 htmlFor='message' />
                             </Grid>
                             <Grid xs={12} item>
-                                <Button type='submit' color='primary' variant='contained' fullWidth>{status}</Button>
+                                <Button 
+                                type='submit' color='primary' variant='contained' fullWidth>{status}</Button>
                             </Grid>
                         </Grid>
                     </form>

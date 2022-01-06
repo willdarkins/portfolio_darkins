@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import profile from '../Images/Profile-Pic.jpg'
+import { motion } from 'framer-motion';
 
 //styles variable from styled-components dependency applied to Nav
 const NavStyles = styled.nav`
@@ -64,27 +65,34 @@ function Nav() {
                 <img src={profile} alt='profile photo' />
             </div>
             <ul className='nav-list'>
-                <li className='list-item'>
+                <motion.li whileHover={{scale: 1.2, transition: { duration: .2 }}}
+                className='list-item'>
                     <NavLink className={'menu-item'} exact to='/' activeClassName='active-class'>Home</NavLink>
-                </li>
-                <li className='list-item'>
+                </motion.li>
+                <motion.li whileHover={{scale: 1.2, transition: { duration: .2 }}}
+                className='list-item'>
                     <NavLink className={'menu-item'} exact to='/about' activeClassName='active-class'>About</NavLink>
-                </li>
-                <li className='list-item'>
+                    </motion.li>
+                    <motion.li whileHover={{scale: 1.2, transition: { duration: .2 }}}
+                className='list-item'>
                     <NavLink className={'menu-item'} exact to='/resume' activeClassName='active-class'>Resume</NavLink>
-                </li>
-                <li className='list-item'>
+                    </motion.li>
+                    <motion.li whileHover={{scale: 1.2, transition: { duration: .2 }}}
+                className='list-item'>
                     <NavLink className={'menu-item'} exact to='/portfolio' activeClassName='active-class'>Portfolio</NavLink>
-                </li>
-                <li className='list-item'>
+                    </motion.li>
+                    <motion.li whileHover={{scale: 1.2, transition: { duration: .2 }}}
+                className='list-item'>
                     <NavLink className={'menu-item'} exact to='/social' activeClassName='active-class'>Social</NavLink>
-                </li>
-                <li className='list-item'>
+                    </motion.li>
+                    <motion.li whileHover={{scale: 1.2, transition: { duration: .2 }}}
+                className='list-item'>
                     <NavLink className={'menu-item'} exact to='/podcasting' activeClassName='active-class'>Podcasting</NavLink>
-                </li>
-                <li className='list-item'>
+                    </motion.li>
+                    <motion.li whileHover={{scale: 1.2, transition: { duration: .2 }}}
+                className='list-item'>
                     <NavLink className={'menu-item'} exact to='/contact' activeClassName='active-class'>Contact</NavLink>
-                </li>
+                    </motion.li>
             </ul>
         <footer className='footer'>
         <p>Will Darkins - 2021</p>

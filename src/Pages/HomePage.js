@@ -5,6 +5,13 @@ import LinkedinIcon from '@material-ui/icons/LinkedIn'
 import { Icon } from '@iconify/react';
 import { motion } from 'framer-motion';
 
+const pageTransitions = {
+    initial: { opacity: 0},
+    animate: { opacity: 1},
+    exit: { opacity: 0},
+    transition: { duration: 0.5 }
+}
+
 //styles variable from styled-components dependency applied to HomePage component
 const HomeStyles = styled.header`
     width: 100%;
@@ -51,9 +58,11 @@ function HomePage() {
     return (
         <HomeStyles>
             <motion.div
-            exit={{ opacity: 0}}
-            animate={{opacity: 1}}
-            initial={{opacity: 0}}
+            exit="exit"
+            animate="animate"
+            initial="initial"
+            transition="transition"
+            variants={pageTransitions}
             className='intro'>
                 <h1 as={motion.div} drag animate={{ fontSize: 50}} color='#ff'>👋 Hi there! I'm <span>Will Darkins</span></h1>
                 <p>

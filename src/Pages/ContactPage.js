@@ -32,24 +32,32 @@ const location = <PushPinIcon />
 function Contact() {
     return (
         <MainLayout>
-            <motion.div
-                exit={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                initial={{ opacity: 0 }}
-                className='intro'>
-            <Title title={'Contact'} />
-            <ContactStyles>
-                <InnerLayout className={'contact-section'}>
-                    <div className='material-contact-form'>
-                        <ContactForm />
-                    </div>
-                    <div className='contact-cards'>
-                        <ContactCard title={'Phone'} icon={phone} contact1={'C: 503-807-3301'} contact2={'W: 503-504-7913'} />
-                        <ContactCard title={'Email'} icon={email} contact1={'P: willdarkins@gmail.com'} contact2={'W: will.darkins@audacy.com'} />
-                        <ContactCard title={'Address'} icon={location} contact1={'2810 SW 199th PL'} contact2={'Aloha, OR 97003'} />
-                    </div>
-                </InnerLayout>
-            </ContactStyles>
+            <motion.div initial="hidden" animate="visible" variants={{
+                hidden: {
+                    scale: .8,
+                    opacity: 0
+                },
+                visible: {
+                    scale: 1,
+                    opacity: 1,
+                    transition: {
+                        delay: .4
+                    }
+                },
+            }}>
+                <Title title={'Contact'} />
+                <ContactStyles>
+                    <InnerLayout className={'contact-section'}>
+                        <div className='material-contact-form'>
+                            <ContactForm />
+                        </div>
+                        <div className='contact-cards'>
+                            <ContactCard title={'Phone'} icon={phone} contact1={'C: 503-807-3301'} contact2={'W: 503-504-7913'} />
+                            <ContactCard title={'Email'} icon={email} contact1={'P: willdarkins@gmail.com'} contact2={'W: will.darkins@audacy.com'} />
+                            <ContactCard title={'Address'} icon={location} contact1={'2810 SW 199th PL'} contact2={'Aloha, OR 97003'} />
+                        </div>
+                    </InnerLayout>
+                </ContactStyles>
             </motion.div>
         </MainLayout>
     )
