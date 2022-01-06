@@ -9,6 +9,7 @@ import Social from './Pages/SocialPage.js';
 import Podcasting from './Pages/PodcastingPage.js';
 import Contact from './Pages/ContactPage.js';
 import styled from 'styled-components'
+import { AnimatePresence, motion } from ''
 
 //styles to be applied to main content section on the app... this is everything but the SibeBar and Nav
 const MainStyles = styled.main`
@@ -28,15 +29,17 @@ function App() {
             <Router forceRefresh>
                 <SideBar />
                 <MainStyles>
-                    <Switching>
-                        <Route exact path='/' component={HomePage} />
-                        <Route exact path='/about' component={About} />
-                        <Route exact path='/portfolio' component={Portfolio} />
-                        <Route exact path='/resume' component={ResumePage} />
-                        <Route exact path='/social' component={Social} />
-                        <Route exact path='/podcasting' component={Podcasting} />
-                        <Route exact path='/contact' component={Contact} />
-                    </Switching>
+                    <AnimatePresence>
+                        <Switching>
+                            <Route exact path='/' component={HomePage} />
+                            <Route exact path='/about' component={About} />
+                            <Route exact path='/portfolio' component={Portfolio} />
+                            <Route exact path='/resume' component={ResumePage} />
+                            <Route exact path='/social' component={Social} />
+                            <Route exact path='/podcasting' component={Podcasting} />
+                            <Route exact path='/contact' component={Contact} />
+                        </Switching>
+                    </AnimatePresence>
                 </MainStyles>
             </Router>
         </>
