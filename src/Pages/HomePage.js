@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import LinkedinIcon from '@material-ui/icons/LinkedIn'
 import { Icon } from '@iconify/react';
-
+import { motion } from 'framer-motion';
 
 //styles variable from styled-components dependency applied to HomePage component
 const HomeStyles = styled.header`
@@ -50,8 +50,12 @@ const HomeStyles = styled.header`
 function HomePage() {
     return (
         <HomeStyles>
-            <div className='intro'>
-                <h1>👋 Hi there! I'm <span>Will Darkins</span></h1>
+            <motion.div
+            exit={{ opacity: 0}}
+            animate={{opacity: 1}}
+            initial={{opacity: 0}}
+            className='intro'>
+                <h1 as={motion.div} drag animate={{ fontSize: 50}} color='#ff'>👋 Hi there! I'm <span>Will Darkins</span></h1>
                 <p>
                     This is some bullshit information about me and things that I do so people will think I know
                     what I'm doing on daily basis. This blurb will go on three more times. This is some bullshit information about me and things that I do so people will think I know
@@ -70,7 +74,7 @@ function HomePage() {
                         <Icon icon="mdi:vimeo" style={{ fontSize: 40 }} />
                     </a>
                 </div>
-            </div>
+            </motion.div>
         </HomeStyles>
     )
 }

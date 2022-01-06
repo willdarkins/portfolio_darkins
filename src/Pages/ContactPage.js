@@ -7,6 +7,7 @@ import ContactCard from '../Components/ContactCards'
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 import EmailIcon from '@mui/icons-material/Email';
 import PushPinIcon from '@mui/icons-material/PushPin';
+import { motion } from 'framer-motion';
 
 const ContactStyles = styled.section`
     .contact-section{
@@ -31,6 +32,11 @@ const location = <PushPinIcon />
 function Contact() {
     return (
         <MainLayout>
+            <motion.div
+                exit={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                initial={{ opacity: 0 }}
+                className='intro'>
             <Title title={'Contact'} />
             <ContactStyles>
                 <InnerLayout className={'contact-section'}>
@@ -38,12 +44,13 @@ function Contact() {
                         <ContactForm />
                     </div>
                     <div className='contact-cards'>
-                    <ContactCard title={'Phone'} icon={phone} contact1={'C: 503-807-3301'} contact2={'W: 503-504-7913'}/>
-                    <ContactCard title={'Email'} icon={email} contact1={'P: willdarkins@gmail.com'} contact2={'W: will.darkins@audacy.com'}/>
-                    <ContactCard title={'Address'} icon={location} contact1={'2810 SW 199th PL'} contact2={'Aloha, OR 97003'}/>
+                        <ContactCard title={'Phone'} icon={phone} contact1={'C: 503-807-3301'} contact2={'W: 503-504-7913'} />
+                        <ContactCard title={'Email'} icon={email} contact1={'P: willdarkins@gmail.com'} contact2={'W: will.darkins@audacy.com'} />
+                        <ContactCard title={'Address'} icon={location} contact1={'2810 SW 199th PL'} contact2={'Aloha, OR 97003'} />
                     </div>
                 </InnerLayout>
             </ContactStyles>
+            </motion.div>
         </MainLayout>
     )
 }

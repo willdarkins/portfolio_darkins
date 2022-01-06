@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Switch as Switching } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import SideBar from './Components/SideBar'
 import HomePage from './Pages/HomePage'
 import About from './Pages/AboutPage.js'
@@ -9,7 +9,8 @@ import Social from './Pages/SocialPage.js';
 import Podcasting from './Pages/PodcastingPage.js';
 import Contact from './Pages/ContactPage.js';
 import styled from 'styled-components'
-import { AnimatePresence, motion } from ''
+import { AnimatePresence } from 'framer-motion';
+
 
 //styles to be applied to main content section on the app... this is everything but the SibeBar and Nav
 const MainStyles = styled.main`
@@ -30,7 +31,7 @@ function App() {
                 <SideBar />
                 <MainStyles>
                     <AnimatePresence>
-                        <Switching>
+                        <Switch>
                             <Route exact path='/' component={HomePage} />
                             <Route exact path='/about' component={About} />
                             <Route exact path='/portfolio' component={Portfolio} />
@@ -38,7 +39,7 @@ function App() {
                             <Route exact path='/social' component={Social} />
                             <Route exact path='/podcasting' component={Podcasting} />
                             <Route exact path='/contact' component={Contact} />
-                        </Switching>
+                        </Switch>
                     </AnimatePresence>
                 </MainStyles>
             </Router>
