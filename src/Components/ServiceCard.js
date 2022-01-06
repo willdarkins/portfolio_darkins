@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import DeveloperBoardIcon from '@mui/icons-material/DeveloperBoard';
 import DesignServicesIcon from '@mui/icons-material/DesignServices';
 import PodcastsIcon from '@mui/icons-material/Podcasts';
+import { motion } from 'framer-motion';
 
 const CardStyles = styled.div`
     margin: 0 1rem;
@@ -47,13 +48,22 @@ const podcast = <PodcastsIcon />
 //passing props for info that will be displayed on each of the core skills listed on the About Page
 function ServiceCard({ icon, title, paragraph }) {
     return (
-        <CardStyles>
-            <div className='container'>
-                <p>{icon}</p>
-                <h4>{title}</h4>
-                <p>{paragraph}</p>
-            </div>
-        </CardStyles>
+        <motion.div
+            whileHover={{
+                scale: 1.15,
+                transition: {
+                    duration: .2
+                }
+            }}
+            className='container'>
+            <CardStyles>
+                <div className='container'>
+                    <p>{icon}</p>
+                    <h4>{title}</h4>
+                    <p>{paragraph}</p>
+                </div>
+            </CardStyles>
+        </motion.div>
     )
 }
 

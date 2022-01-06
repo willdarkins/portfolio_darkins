@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { MainLayout, InnerLayout } from '../Styles/Layout'
+import { InnerLayout } from '../Styles/Layout'
 import Title from '../Components/Title'
 import ProgressBar from './ProgressBar'
 
