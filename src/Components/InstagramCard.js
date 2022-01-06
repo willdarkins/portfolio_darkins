@@ -1,12 +1,13 @@
 import React from 'react'
-import { Grid, Typography, Avatar } from '@material-ui/core'
+import { Grid, Button, Typography, Avatar } from '@material-ui/core'
 import styled from 'styled-components';
 import ClearIcon from '@mui/icons-material/Clear';
 import FANProfilePic from '../Images/avatar_FAN.jpg'
+import Paper from '@mui/material/Paper';
 
 const InstaCardStyles = styled.div`
     .main{
-        border: .2rem solid #cccccc;
+        border: .1rem solid #cccccc;
         padding: 1rem;
         border-radius: .2rem;
         max-width: 200px;
@@ -19,7 +20,20 @@ const InstaCardStyles = styled.div`
     .photo{
         width: 5rem;
         height: 5rem;
-        border: .05rem solid black;
+        box-shadow: 1px 1px 1px 1px #888888;
+    }
+    .userName{
+        margin: 1.5rem 0 1rem 0;
+        text-align: center;
+        font-weight: bold;
+        color: var(--font-dark);
+
+    }
+    .button{
+        text-transform: none;
+        padding-left: 1rem;
+        padding-right: 1rem;
+
     }
 `
 
@@ -41,7 +55,7 @@ const Header = () => {
     return (
         <Grid container justifyContent='flex-end'>
             <Grid item xs={1}>
-            <ClearIcon className='header'/>
+                <ClearIcon className='header' />
             </Grid>
         </Grid>
     )
@@ -49,13 +63,28 @@ const Header = () => {
 const Photo = () => {
     return (
         <Avatar
-        className='photo'
-        alt='1080 The FAN'
-        src= {FANProfilePic} />
+            className='photo'
+            alt='1080 The FAN'
+            src={FANProfilePic} />
     )
 }
 const UserName = () => {
-    
+    return (
+        <Grid container justifyContent='center' alignItems='center' spacing={4}>
+            <Typography variant='body2' className='userName'>1080thefan</Typography>
+        </Grid>
+    )
+
 }
-const ProfileName = () => <Typography variant='h6'>ProfileName</Typography>
-const FollowButton = () => <Typography variant='h6'>FollowButton</Typography>
+const ProfileName = () => {
+    return (
+        <Typography color='textSecondary' variant='caption'>1080 The FAN</Typography>
+    )
+}
+const FollowButton = () => {
+    return (
+        <Button disableElevation color= "primary" variant='contained' size='small' className='button'>
+            Follow
+        </Button> 
+    )
+}
