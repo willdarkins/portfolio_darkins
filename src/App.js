@@ -17,6 +17,9 @@ const MainStyles = styled.main`
     position: relative;
     margin-left: 16rem;
     min-height: 100vh;
+    @media screen and (max-width: 1200px){
+        margin-left: 0;
+    }
     .p-particles-js{
         position: absolute;
         top: 0;

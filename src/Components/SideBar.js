@@ -14,7 +14,7 @@ const BarStyles = styled.div`
     width: 16.5rem;
     height: 100vh;
     font-size: 50rem;
-
+    transition: all .5s ease-in-out;
     .light-dark-mode{
         position: absolute;
         right: 30%;
@@ -31,6 +31,9 @@ const BarStyles = styled.div`
             display: flex;
             align-items: center;
         }
+    }
+    @media screen and (max-width: 1200px){
+      transform: translateX(-100%)
     }
 `
 
