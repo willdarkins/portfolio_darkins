@@ -54,6 +54,10 @@ const InstaCardStyles = styled.div`
                 padding: 1rem 0;
                 color: var(--font-dark);
             }
+            span{
+            color: var(--blue);
+            font-size: 2.7rem; 
+        }
     }
 
 `
@@ -115,7 +119,7 @@ const FollowButton = () => {
 const Descrpitor = () => {
     return (
         <div className='descrip-content'>
-            <h4>Creating for the Airwaves</h4>
+            <h4>Creating for the <span>Airwaves</span></h4>
             <p className='paragraph'>
                 Not only do I produce audio for the ESPN Radio affiliate in Portland OR, 1080 The FAN,
                 I also serve as Digital Content Manager for the brand. <br/><br/>My responsibilities include currating 

@@ -65,7 +65,7 @@ function HomePage() {
                 transition={{ duration: 0.8 }}
                 className='intro'>
                 <div className='intro'>
-                    <h1 as={motion.div} drag animate={{ fontSize: 50 }} color='#ff'>👋 Hi there! I'm <span>Will Darkins</span></h1>
+                    <h1>👋 Hi there! I'm <span>Will Darkins</span></h1>
                     <p>
                         This is some bullshit information about me and things that I do so people will think I know
                         what I'm doing on daily basis. This blurb will go on three more times. This is some bullshit information about me and things that I do so people will think I know
