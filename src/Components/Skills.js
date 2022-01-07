@@ -48,14 +48,14 @@ function Skills() {
                     <ServiceCard
                         icon={develop}
                         title={'Full-Stack Development'}
-                        paragraph={' This is some bullshit information about me and things that I do so people will think I know This is some bullshit information about me and things that I do so people will think I know'}
+                        paragraph={' This is some bullshit information about me and things that I do so people will think I know This is some bullshit information about '}
                     />
                     </div>
                     <div className='mid-card'>
                         <ServiceCard
                             icon={design}
                             title={'Graphic Design'}
-                            paragraph={' This is some bullshit information about me and things that I do so people will think I know This is some bullshit information about me and things that I do so people will think I know'}
+                            paragraph={' This is some bullshit information about me and things that I do so people will think I know This is some bullshit information about '}
                         />
                     </div>
                     <div className='last-card'>
@@ -63,7 +63,7 @@ function Skills() {
                         button={'LISTEN!'}
                         icon={podcast}
                         title={'Podcasting/Audio Design'}
-                        paragraph={' This is some bullshit information about me and things that I do so people will think I know This is some bullshit information about me and things that I do so people will think I know'}
+                        paragraph={' This is some bullshit information about me and things that I do so people will think I know This is some bullshit information about '}
                     />
                     </div>
                 </div>

@@ -37,7 +37,6 @@ const location = useLocation()
                             <Route exact path='/portfolio' component={Portfolio} />
                             <Route exact path='/resume' component={ResumePage} />
                             <Route exact path='/social' component={Social} />
-                            <Route exact path='/podcasting' component={Podcasting} />
                             <Route exact path='/contact' component={Contact} />
                         </Switch>
                     </AnimatePresence>

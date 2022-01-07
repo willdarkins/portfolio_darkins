@@ -21,13 +21,13 @@ const CardStyles = styled.div`
                 border-radius:2em;
                 box-sizing: border-box;
                 text-decoration:none;
-                /* font-weight:300; */
                 color:#FFFFFF;
                 background-color:#4eb5f1;
                 text-align:center;
                 transition: all 0.2s;
                 font-family:'Roboto',sans-serif;
                 font-weight: bold;
+                border: none;
             }
             button:hover{
                 background-color:#4095c6;

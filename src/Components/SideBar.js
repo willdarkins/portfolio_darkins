@@ -18,7 +18,7 @@ const BarStyles = styled.div`
     .light-dark-mode{
         position: absolute;
         right: 30%;
-        top: 30%;
+        top: 32%;
         background: #004b69;
         border-radius: 20%;
         width: 6.5rem;

@@ -87,10 +87,6 @@ function Nav() {
                     </motion.li>
                     <motion.li whileHover={{scale: 1.2, transition: { duration: .2 }}}
                 className='list-item'>
-                    <NavLink className={'menu-item'} exact to='/podcasting' activeClassName='active-class'>Podcasting</NavLink>
-                    </motion.li>
-                    <motion.li whileHover={{scale: 1.2, transition: { duration: .2 }}}
-                className='list-item'>
                     <NavLink className={'menu-item'} exact to='/contact' activeClassName='active-class'>Contact</NavLink>
                     </motion.li>
             </ul>
