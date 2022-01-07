@@ -13,11 +13,24 @@ const SkillStyles = styled.section`
         justify-content: space-between;
         margin-top: 3rem;
         color: var(--font-dark);
-        .mid-card{
-            margin: 0 1.2rem;
-        }
         svg{
             color: var(--font-dark);
+        }
+        .first-card{
+            button{
+                display: none;
+            }
+        }
+        .mid-card{
+            margin: 0 1.2rem;
+            button{
+                display: none;
+            }
+        }
+        .last-card{
+            button{
+                font-size-adjust: inherit;
+            }
         }
     }
 `
@@ -31,11 +44,13 @@ function Skills() {
             <SkillStyles>
                 <Title title={'Skills'} />
                 <div className='services'>
+                    <div className='first-card'>
                     <ServiceCard
                         icon={develop}
                         title={'Full-Stack Development'}
                         paragraph={' This is some bullshit information about me and things that I do so people will think I know This is some bullshit information about me and things that I do so people will think I know'}
                     />
+                    </div>
                     <div className='mid-card'>
                         <ServiceCard
                             icon={design}
@@ -43,11 +58,14 @@ function Skills() {
                             paragraph={' This is some bullshit information about me and things that I do so people will think I know This is some bullshit information about me and things that I do so people will think I know'}
                         />
                     </div>
+                    <div className='last-card'>
                     <ServiceCard
+                        button={'LISTEN!'}
                         icon={podcast}
                         title={'Podcasting/Audio Design'}
                         paragraph={' This is some bullshit information about me and things that I do so people will think I know This is some bullshit information about me and things that I do so people will think I know'}
                     />
+                    </div>
                 </div>
             </SkillStyles>
         </InnerLayout>

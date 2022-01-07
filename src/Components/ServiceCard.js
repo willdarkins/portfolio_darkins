@@ -1,8 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import DeveloperBoardIcon from '@mui/icons-material/DeveloperBoard';
-import DesignServicesIcon from '@mui/icons-material/DesignServices';
-import PodcastsIcon from '@mui/icons-material/Podcasts';
 import { motion } from 'framer-motion';
 
 const CardStyles = styled.div`
@@ -16,6 +13,29 @@ const CardStyles = styled.div`
         svg{
             font-size: 5rem; 
         }
+        button{
+                cursor: pointer;
+                display: inline-block;
+                padding:0.3em 1.2em;
+                margin:0 0.3em 0.3em 0;
+                border-radius:2em;
+                box-sizing: border-box;
+                text-decoration:none;
+                /* font-weight:300; */
+                color:#FFFFFF;
+                background-color:#4eb5f1;
+                text-align:center;
+                transition: all 0.2s;
+                font-family:'Roboto',sans-serif;
+                font-weight: bold;
+            }
+            button:hover{
+                background-color:#4095c6;
+            }
+            a{
+                font-size: 1rem;
+                text-decoration: none;
+            }
     }
     .container:hover{
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -36,17 +56,11 @@ const CardStyles = styled.div`
         }
     }
     p{
-        padding: .8rem 0    ;
-
+        padding: .8rem 0
     }
 `
-const develop = <DeveloperBoardIcon />
-const design = <DesignServicesIcon />
-const podcast = <PodcastsIcon />
-
-
 //passing props for info that will be displayed on each of the core skills listed on the About Page
-function ServiceCard({ icon, title, paragraph }) {
+function ServiceCard({ icon, title, paragraph, button }) {
     return (
         <motion.div
             whileHover={{
@@ -61,6 +75,7 @@ function ServiceCard({ icon, title, paragraph }) {
                     <p>{icon}</p>
                     <h4>{title}</h4>
                     <p>{paragraph}</p>
+                    <button><a href='https://www.audacy.com/1080thefan/podcasts/the-sinner-and-the-saint-20360' target='_blank' rel='noopener noreferrer'>{button}</a></button>
                 </div>
             </CardStyles>
         </motion.div>
