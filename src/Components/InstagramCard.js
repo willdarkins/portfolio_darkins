@@ -13,7 +13,7 @@ const InstaCardStyles = styled.div`
         border-radius: .2rem;
         max-width: 200px;
         background-color: var(--dark-card) ;
-        margin-top: 1rem;
+        margin-top: 1.5rem;
             .header{
             color: var(--font-dark);
             height: 0.9rem;
