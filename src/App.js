@@ -10,6 +10,9 @@ import Podcasting from './Pages/PodcastingPage.js';
 import Contact from './Pages/ContactPage.js';
 import styled from 'styled-components'
 import { AnimatePresence } from 'framer-motion';
+import MenuIcon from '@mui/icons-material/Menu';
+import { IconButton } from '@material-ui/core';
+
 
 
 //styles to be applied to main content section on the app... this is everything but the SibeBar and Nav
@@ -32,6 +35,11 @@ const location = useLocation()
         <>
             <Router forceRefresh>
                 <SideBar />
+                <div className='menu-burger'>
+                    <IconButton>
+                        <MenuIcon />
+                    </IconButton>
+                </div>
                 <MainStyles>
                     <AnimatePresence exitBeforeEnter>
                         <Switch location={location} key={location.pathname}>
