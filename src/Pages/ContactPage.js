@@ -23,9 +23,15 @@ const ContactStyles = styled.section`
             display: flex;
             justify-content: space-between;
             flex-direction: column;
+            @media screen and (max-width: 500px){
+            width: 90%;
+            } 
         }
         .material-contact-form{
             margin-bottom: 2rem;
+            @media screen and (max-width: 500px){
+            width: 90%;
+            }  
         }
     }
 `

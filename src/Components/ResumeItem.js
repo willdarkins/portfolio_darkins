@@ -3,6 +3,11 @@ import styled from 'styled-components'
 
 const ItemStyles = styled.div`
     display: flex;
+    @media screen and (max-width: 420px){
+        p{
+            font-size: 80%;
+        }
+    }
     &:not(:last-child){
         padding-bottom: 3rem;
     }

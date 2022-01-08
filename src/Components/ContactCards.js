@@ -8,6 +8,11 @@ const CardStyles = styled.div`
     display: flex;
     align-items: center;
     box-shadow: 5px 10px 18px #888888;
+    @media screen and (max-width: 420px){
+        p{
+            font-size: 80%;
+        }
+    }
     &:not(:last-child){
         margin-bottom: 2rem;
     }
@@ -26,9 +31,9 @@ const CardStyles = styled.div`
             font-size: 1.2rem;
             padding-bottom: .6rem;
         }
-        //turn into anchor tags later
         p{
             padding: .4rem 0;
+            font-size: 6rem;
         }
     }
     }
