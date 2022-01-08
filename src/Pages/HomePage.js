@@ -26,6 +26,14 @@ const HomeStyles = styled.header`
         transform: translate(-50%, -50%);
         text-align: center;
         font-size: 1rem;
+        @media screen and (max-width: 600px){
+            h1{
+                font-size: 2.8rem;
+            }
+            span{
+                font-size: 2.8rem;
+            }
+        }
         
         h1{
             padding-bottom: 2rem;

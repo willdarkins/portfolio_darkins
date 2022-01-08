@@ -11,7 +11,7 @@ const InfoStyles = styled.div`
         .img-content{
             margin-bottom: 2rem;
         }
-}   
+    }   
     .img-content{
         width: 100%;
 

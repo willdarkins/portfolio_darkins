@@ -68,14 +68,29 @@ const InstaCardStyles = styled.div`
             h4{
                 font-size: 2.5rem;
                 color: var(--font-dark);
+                @media screen and (max-width: 780px){
+                font-size: 2rem;
+                }
+                @media screen and (max-width: 450px){
+                font-size: 1.5rem;
+                } 
             }
             .paragraph{
                 padding: 1rem 0;
                 color: var(--font-dark);
+                @media screen and (max-width: 780px){
+                font-size: .8rem;
+                } 
             }
             span{
             color: var(--blue);
-            font-size: 2.7rem; 
+            font-size: 2.7rem;
+            @media screen and (max-width: 780px){
+            font-size: 2rem;
+            }
+            @media screen and (max-width: 450px){
+                font-size: 1.5rem;
+                }  
         }
     }
     .userName .profName{
