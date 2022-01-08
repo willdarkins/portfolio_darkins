@@ -6,6 +6,12 @@ const SocialStyles = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
+    @media screen and (max-width: 1200px){
+    grid-template-columns: repeat(2, 1fr);
+}   
+    @media screen and (max-width: 1000px){
+    grid-template-columns: repeat(1, 1fr);
+}   
     .post-image{
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
