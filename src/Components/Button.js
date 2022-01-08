@@ -4,7 +4,6 @@ import Button from '@mui/material/Button';
 
 const ButtonStyles = styled.div`
     margin: 0 auto;
-    margin-bottom: 2.5rem;
     width: 70%;
     display: flex;
     justify-content: center;
@@ -13,9 +12,10 @@ const ButtonStyles = styled.div`
     flex-wrap: wrap;
     .material-button{
         cursor: pointer;
+        margin-bottom: .6rem;
         &:not(:last-child){
         margin-right: .6rem;
-    }
+        }
     }
 `
 
