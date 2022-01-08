@@ -8,6 +8,12 @@ const MenuStyles = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
+    @media screen and (max-width: 920px){
+    grid-template-columns: repeat(2, 1fr);  
+}
+    @media screen and (max-width: 670px){
+    grid-template-columns: repeat(1, 1fr);  
+}
     .portfolio-image{
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
