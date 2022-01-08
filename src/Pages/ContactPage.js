@@ -16,10 +16,16 @@ const ContactStyles = styled.section`
         grid-column-gap: 2rem;
         position: absolute;
         left: auto;
+        @media screen and (max-width: 980px){
+        grid-template-columns: repeat(1, 1fr);
+        }   
         .contact-cards{
             display: flex;
             justify-content: space-between;
             flex-direction: column;
+        }
+        .material-contact-form{
+            margin-bottom: 2rem;
         }
     }
 `

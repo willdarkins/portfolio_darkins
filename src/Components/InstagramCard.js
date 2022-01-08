@@ -79,8 +79,6 @@ const InstaCardStyles = styled.div`
 
 `
 
-const useStyles = makeStyles();
-
 export const InstagramCard = () => {
     return (
         <InstaCardStyles>
