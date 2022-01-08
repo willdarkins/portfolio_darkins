@@ -6,9 +6,15 @@ import Button from '@mui/material/Button';
 const InfoStyles = styled.div`
     display: flex;
     margin-top: 3rem;
+    @media screen and (max-width: 1000px){
+        flex-direction: column;
+        .img-content{
+            margin-bottom: 2rem;
+        }
+}   
     .img-content{
         width: 100%;
-        height: 40vh;
+
         img{
             width: 80%;
             object-fit: cover;

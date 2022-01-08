@@ -13,6 +13,9 @@ const SkillStyles = styled.section`
         justify-content: space-between;
         margin-top: 3rem;
         color: var(--font-dark);
+        @media screen and (max-width: 1000px){
+            flex-direction: column;
+    }
         svg{
             color: var(--font-dark);
         }
