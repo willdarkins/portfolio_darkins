@@ -14,7 +14,14 @@ const InfoStyles = styled.div`
             object-fit: cover;
         }
     }
-    .descrip-content
+    .descrip-content{
+        .Button{
+            padding-top: 3rem;
+            a{
+                font-size: 1rem;
+            }
+        }
+    }
     h4{
         font-size: 2.5rem;
         color: var(--font-dark);
@@ -39,12 +46,6 @@ const InfoStyles = styled.div`
                 color: var(--font-dark);
             }
     }
-        .Button{
-            padding-top: 3rem;
-            a{
-                font-size: 1rem;
-            }
-        }
     
 `
 function BasicInfo() {

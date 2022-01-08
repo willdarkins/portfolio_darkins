@@ -10,9 +10,7 @@ import Contact from './Pages/ContactPage.js';
 import styled from 'styled-components'
 import { AnimatePresence } from 'framer-motion';
 import MenuIcon from '@mui/icons-material/Menu';
-import { IconButton } from '@material-ui/core';
-
-
+import { ButtonBase } from '@mui/material';
 
 //styles to be applied to main content section on the app... this is everything but the SibeBar and Nav
 const MainStyles = styled.main`
@@ -29,16 +27,16 @@ const MainStyles = styled.main`
     }
 `
 function App() {
-const location = useLocation()
-const [navToggle, setNavToggle] = useState(false);
+    const location = useLocation()
+    const [navToggle, setNavToggle] = useState(false);
     return (
         <>
             <Router forceRefresh>
-                <SideBar navToggle={navToggle}/>
+                <SideBar navToggle={navToggle} />
                 <div className='menu-burger'>
-                    <IconButton onClick={() => setNavToggle(!navToggle)}>
+                    <ButtonBase onClick={() => setNavToggle(!navToggle)}>
                         <MenuIcon />
-                    </IconButton>
+                    </ButtonBase>
                 </div>
                 <MainStyles>
                     <AnimatePresence exitBeforeEnter>
@@ -56,7 +54,5 @@ const [navToggle, setNavToggle] = useState(false);
         </>
     )
 }
-
-
 
 export default App

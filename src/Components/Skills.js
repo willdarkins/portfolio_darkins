@@ -29,7 +29,6 @@ const SkillStyles = styled.section`
         }
         .last-card{
             button{
-                font-size-adjust: inherit;
             }
         }
     }
