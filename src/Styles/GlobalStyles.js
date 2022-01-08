@@ -86,6 +86,7 @@ const GlobalStyle = createGlobalStyle`
     }
     .menu-burger{
         position: absolute;
+        display: none;
         right: 5%;
         top: 3%;
         z-index: 15;
@@ -93,14 +94,15 @@ const GlobalStyle = createGlobalStyle`
             font-size: 3rem;
             color: var(--blue);
             }
-        }
+            @media screen and (max-width: 1200px){
+                display: block;
+}       
+    }
     .nav-toggle{
         transform: translateX(0);
         z-index: 20;
     }
-    @media screen and (max-width: 1200px){
 
-    }
 
 
 `
