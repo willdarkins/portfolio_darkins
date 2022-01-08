@@ -15,6 +15,9 @@ const SkillStyles = styled.section`
         color: var(--font-dark);
         @media screen and (max-width: 1000px){
             flex-direction: column;
+            .mid-card{
+                margin: 2rem 0;
+            }
     }
         svg{
             color: var(--font-dark);
@@ -25,7 +28,7 @@ const SkillStyles = styled.section`
             }
         }
         .mid-card{
-            margin: 0 1.2rem;
+            /* margin: 0 1.2rem; */
             button{
                 display: none;
             }
