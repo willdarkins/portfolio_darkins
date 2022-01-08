@@ -9,7 +9,14 @@ const TitleStyles = styled.div`
         font-weight: 600;
         text-transform: uppercase;
         border-bottom: var(--blue) solid;
+        @media screen and (max-width: 620px){
+        font-size: 2.5rem;
+        }
+        @media screen and (max-width: 496px){
+        font-size: 2rem;
+        }
     }
+
 `
 //passing prop that will be universal values for page titles across each section of the site
 function Title({ title }) {

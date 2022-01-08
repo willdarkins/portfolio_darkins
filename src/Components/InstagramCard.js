@@ -26,9 +26,16 @@ const InstaCardStyles = styled.div`
         @media screen and (max-width: 900px){
             max-height: 250px;
 }
+        @media screen and (max-width: 900px){
+            background-color: var(--background-dark);
+            border: none;
+}
             .header{
             color: var(--font-dark);
             height: 0.9rem;
+            @media screen and (max-width: 900px){
+            display: none;
+}
             }
             .photo{
             width: 5rem;
