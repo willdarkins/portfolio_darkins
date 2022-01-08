@@ -3,6 +3,9 @@ import { Grid, Button, Typography, Avatar } from '@material-ui/core'
 import styled from 'styled-components';
 import ClearIcon from '@mui/icons-material/Clear';
 import FANProfilePic from '../Images/avatar_FAN.jpg'
+import { useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { makeStyles } from '@material-ui/core';
 
 const InstaCardStyles = styled.div`
     display: flex;
@@ -14,6 +17,15 @@ const InstaCardStyles = styled.div`
         max-width: 200px;
         background-color: var(--dark-card) ;
         margin-top: 1.5rem;
+        @media screen and (max-width: 1270px){
+            max-width: 150px;
+}
+        @media screen and (max-width: 1270px){
+            max-height: 300px;
+}
+        @media screen and (max-width: 900px){
+            max-height: 250px;
+}
             .header{
             color: var(--font-dark);
             height: 0.9rem;
@@ -59,8 +71,15 @@ const InstaCardStyles = styled.div`
             font-size: 2.7rem; 
         }
     }
+    .userName .profName{
+        @media screen and (max-width: 900px){
+            font-size: .5rem;
+        }
+    }
 
 `
+
+const useStyles = makeStyles();
 
 export const InstagramCard = () => {
     return (
@@ -87,17 +106,22 @@ const Header = () => {
     )
 }
 const Photo = () => {
+    const theme = useTheme();
+    const matches = useMediaQuery(theme.breakpoints.down('xs'))
     return (
         <Avatar
             className='photo'
             alt='1080 The FAN'
+            sx= {matches ? 'width: 24, height: 24' : 'width: 56, height: 56'}
             src={FANProfilePic} />
     )
 }
 const UserName = () => {
+    const theme = useTheme();
+    const matches = useMediaQuery(theme.breakpoints.down('xs'))
     return (
         <Grid container justifyContent='center' alignItems='center' spacing={4}>
-            <Typography variant='body2' className='userName'>1080thefan</Typography>
+            <Typography variant={matches ? 'body2' : 'body1'} className='userName'>1080thefan</Typography>
         </Grid>
     )
 
