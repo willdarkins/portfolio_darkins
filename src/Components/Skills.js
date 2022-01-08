@@ -9,15 +9,20 @@ import PodcastsIcon from '@mui/icons-material/Podcasts';
 
 const SkillStyles = styled.section`
     .services{
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1.5rem;
         margin-top: 3rem;
         color: var(--font-dark);
         @media screen and (max-width: 1000px){
             flex-direction: column;
-            .mid-card{
-                margin: 2rem 0;
-            }
+
+    }
+        @media screen and (max-width: 950px){
+            grid-template-columns: repeat(2, 1fr);
+    }
+        @media screen and (max-width: 650px){
+            grid-template-columns: repeat(1, 1fr);
     }
         svg{
             color: var(--font-dark);
@@ -28,7 +33,6 @@ const SkillStyles = styled.section`
             }
         }
         .mid-card{
-            /* margin: 0 1.2rem; */
             button{
                 display: none;
             }
