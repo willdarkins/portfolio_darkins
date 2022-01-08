@@ -14,8 +14,7 @@ const BarStyles = styled.div`
     width: 16.5rem;
     height: 100vh;
     font-size: 50rem;
-    overflow: hidden;
-    transition: all .3s ease-in-out;
+    transition: all .5s ease-in-out;
     .light-dark-mode{
         position: absolute;
         right: 30%;
@@ -38,7 +37,7 @@ const BarStyles = styled.div`
     }
 `
 
-function SideBar({navToggle }) {
+function SideBar() {
     const [darkMode, setDarkMode] = useState(false);
     const [checked, setChecked] = useState(false)
   
@@ -66,7 +65,7 @@ function SideBar({navToggle }) {
 
 
     return (
-        <BarStyles className= {`${navToggle ? 'navToggle' : ''}`}>
+        <BarStyles>
             <div className='light-dark-mode'>
                 <div className='left-content'>
                     <DarkModeIcon />

@@ -30,11 +30,11 @@ const MainStyles = styled.main`
 `
 function App() {
 const location = useLocation()
-const [navToggle, setNavToggle] = useState(false)
+const [navToggle, setNavToggle] = useState(false);
     return (
         <>
             <Router forceRefresh>
-                <SideBar navToggle={navToggle}/>
+                <SideBar />
                 <div className='menu-burger'>
                     <IconButton onClick={() => setNavToggle(!navToggle)}>
                         <MenuIcon />

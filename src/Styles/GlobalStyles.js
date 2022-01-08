@@ -84,19 +84,15 @@ const GlobalStyle = createGlobalStyle`
         color: var(--font-dark);
         padding-bottom: .6rem;
     }
-
     .menu-burger{
         position: absolute;
         right: 5%;
-        top: 5%;
+        top: 3%;
         z-index: 15;
         svg{
             font-size: 3rem;
             color: var(--blue);
         }
-        }
-        .nav-toggle{
-            transform: translateX(0)
         }
     @media screen and (max-width: 1200px){
 
