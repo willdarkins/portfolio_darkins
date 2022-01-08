@@ -46,11 +46,14 @@ const InfoStyles = styled.div`
             }
         }
     }
-        .info-title, .info{
-            p{
-                padding: .2rem 0;
-                color: var(--font-dark);
+    .info-title, .info{
+        p{
+            padding: .2rem 0;
+            color: var(--font-dark);
+            @media screen and (max-width: 375px){
+            font-size: 7rem
             }
+        }
     }
     
 `

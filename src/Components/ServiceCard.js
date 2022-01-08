@@ -56,7 +56,7 @@ const CardStyles = styled.div`
         }
     }
     p{
-        padding: .8rem 0
+        padding: .8rem 0;
     }
 `
 //passing props for info that will be displayed on each of the core skills listed on the About Page
