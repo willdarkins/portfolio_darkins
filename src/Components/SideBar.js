@@ -33,11 +33,12 @@ const BarStyles = styled.div`
         }
     }
     @media screen and (max-width: 1200px){
-      transform: translateX(-100%)
+      transform: translateX(-100%);
+      z-index: 20; 
     }
 `
 
-function SideBar() {
+function SideBar({navToggle}) {
     const [darkMode, setDarkMode] = useState(false);
     const [checked, setChecked] = useState(false)
   
@@ -65,7 +66,7 @@ function SideBar() {
 
 
     return (
-        <BarStyles>
+        <BarStyles className={`${navToggle ? 'nav-toggle' : ''}`}>
             <div className='light-dark-mode'>
                 <div className='left-content'>
                     <DarkModeIcon />

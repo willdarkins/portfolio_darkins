@@ -92,8 +92,12 @@ const GlobalStyle = createGlobalStyle`
         svg{
             font-size: 3rem;
             color: var(--blue);
+            }
         }
-        }
+    .nav-toggle{
+        transform: translateX(0);
+        z-index: 20;
+    }
     @media screen and (max-width: 1200px){
 
     }

@@ -34,7 +34,7 @@ const [navToggle, setNavToggle] = useState(false);
     return (
         <>
             <Router forceRefresh>
-                <SideBar />
+                <SideBar navToggle={navToggle}/>
                 <div className='menu-burger'>
                     <IconButton onClick={() => setNavToggle(!navToggle)}>
                         <MenuIcon />
