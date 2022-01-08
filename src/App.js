@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BrowserRouter as Router, Route, Switch, useLocation } from 'react-router-dom';
 import SideBar from './Components/SideBar'
 import HomePage from './Pages/HomePage'
@@ -6,7 +6,6 @@ import About from './Pages/AboutPage.js'
 import Portfolio from './Pages/PortfolioPage.js'
 import ResumePage from './Pages/ResumePage.js';
 import Social from './Pages/SocialPage.js';
-import Podcasting from './Pages/PodcastingPage.js';
 import Contact from './Pages/ContactPage.js';
 import styled from 'styled-components'
 import { AnimatePresence } from 'framer-motion';
@@ -31,12 +30,13 @@ const MainStyles = styled.main`
 `
 function App() {
 const location = useLocation()
+const [navToggle, setNavToggle] = useState(false)
     return (
         <>
             <Router forceRefresh>
-                <SideBar />
+                <SideBar navToggle={navToggle}/>
                 <div className='menu-burger'>
-                    <IconButton>
+                    <IconButton onClick={() => setNavToggle(!navToggle)}>
                         <MenuIcon />
                     </IconButton>
                 </div>
