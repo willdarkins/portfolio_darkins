@@ -57,14 +57,14 @@ function Skills() {
                     <ServiceCard
                         icon={develop}
                         title={'Full-Stack Development'}
-                        paragraph={' This is some bullshit information about me and things that I do so people will think I know This is some bullshit information about '}
-                    />
+                        paragraph={' Extensive experience in writing HTML5, CSS3, Javascript, JQuery, Bootstrap, Node Js, MySQL, MongoDB, Express, Handelbars.js & ReactJS. '}
+                    /> 
                     </div>
                     <div className='mid-card'>
                         <ServiceCard
                             icon={design}
                             title={'Graphic Design'}
-                            paragraph={' This is some bullshit information about me and things that I do so people will think I know This is some bullshit information about '}
+                            paragraph={' Five years experience using Adobe Photoshop and other pixel editing software to create engaging banners & social posts for companies. '}
                         />
                     </div>
                     <div className='last-card'>
@@ -72,7 +72,7 @@ function Skills() {
                         button={'LISTEN!'}
                         icon={podcast}
                         title={'Podcasting/Audio Design'}
-                        paragraph={' This is some bullshit information about me and things that I do so people will think I know This is some bullshit information about '}
+                        paragraph={' Producer/Host of sports radio show airing Saturday morning. Experience using DAW software to produce podcasts, commercials and audio vignettes '}
                     />
                     </div>
                 </div>
