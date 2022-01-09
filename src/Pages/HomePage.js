@@ -73,13 +73,11 @@ function HomePage() {
                 transition={{ duration: 0.8 }}
                 className='intro'>
                 <div className='intro'>
-                    <h1>👋 Hi there! I'm <span>Will Darkins</span></h1>
+                    <h1>👋 I'm Will! <span>Creating is My Thing</span></h1>
                     <p>
-                        This is some bullshit information about me and things that I do so people will think I know
-                        what I'm doing on daily basis. This blurb will go on three more times. This is some bullshit information about me and things that I do so people will think I know
-                        what I'm doing on daily basis. This blurb will go on three more times. This is some bullshit information about me and things that I do so people will think I know
-                        what I'm doing on daily basis. This blurb will go on three more times. This is some bullshit information about me and things that I do so people will think I know
-                        what I'm doing on daily basis. This blurb will go on three more times.
+                    I've been in the business of making things my entire adult life. Whether it was creating cirtical television segments, writing/producing engaging radio commercials or
+                    developing full-stack web applications, I've never stopped learning and pushing personal creative boundries. My specialty is front-end REACT focused web-design, creating 
+                    engaging visual posts for Instagram and effectivley communicating project goals. I'm excited for you check out my work!
                     </p>
                     <div className='icon-list'>
                         <a href='https://www.linkedin.com/in/will-darkins-827368b2/' className='icon' target="_blank" >

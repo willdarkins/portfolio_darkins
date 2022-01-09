@@ -16,7 +16,7 @@ const InfoStyles = styled.div`
         width: 100%;
 
         img{
-            width: 80%;
+            width: 90%;
             object-fit: cover;
         }
     }
@@ -66,8 +66,9 @@ function BasicInfo() {
             <div className='descrip-content'>
                 <h4>The Basics...</h4>
                 <p className='paragraph'>
-                    This is some bullshit information about me and things that I do so people will think I know
-                    what I'm doing on daily basis. This blurb will go on three more times. This is some bullshit.
+                I grew up in the Pacific Northwest during the 2000's. The proliferation of frohawks, MySpace and reality television
+                somehow sparked an affinity to mixed media. Most of my 20's and early 30's were spent working in broadcasting and digital media.
+                I now excel in full-stack web-development.
                 </p>
                 <div className='basic-info'>
                     <div className='info-title'>
