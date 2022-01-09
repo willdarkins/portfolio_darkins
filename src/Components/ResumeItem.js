@@ -30,6 +30,9 @@ const ItemStyles = styled.div`
         }
         p{
             display: inline-block;
+            margin-right: 1rem;
+            padding-right: 5px;
+            font-size: 1.1rem;
 
         }
     }
