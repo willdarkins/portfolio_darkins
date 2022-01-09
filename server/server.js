@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const PORT = process.env.PORT || '5001';
+const PORT = process.env.PORT || '5000';
 
 app.use(express.static(path.resolve(__dirname, "./client/build")));
 
