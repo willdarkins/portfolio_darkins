@@ -40,7 +40,7 @@ function ContactForm() {
             message: message,
         };
 
-        let response = await fetch("http://localhost:5000/contact", {
+        let response = await fetch("http://willdarkins.herokuapp.com", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json;charset=utf-8",
@@ -58,7 +58,8 @@ function ContactForm() {
                     <Typography gutterBottom variant='h5'>Reach out and say hello!</Typography>
                     <Typography gutterBottom variant='body2' color='textsecondary' component='p'>I'll respond ASAP to questions and work inquires</Typography>
                     <form onSubmit={handleSubmit}>
-                        <Grid container spacing={1}>
+                        <Grid container spacing={2}>
+                        <Grid xs={12} item></Grid>
                             <Grid xs={12} sm={6} item>
                                 <TextField
                                     onChange={(e) => setFirst(e.target.value)}

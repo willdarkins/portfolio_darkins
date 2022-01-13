@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import profile from '../Images/Profile-Pic.jpg'
+import artProfile from '../Images/PROFILE PIC_ARTY.jpg'
 import { motion } from 'framer-motion';
 
 //styles variable from styled-components dependency applied to Nav
@@ -62,7 +63,7 @@ function Nav() {
     return (
         <NavStyles>
             <div className='profile'>
-                <img src={profile} alt='profile photo' />
+                <img src={artProfile} alt='profile photo' />
             </div>
             <ul className='nav-list'>
                 <motion.li whileHover={{scale: 1.2, transition: { duration: .2 }}}
