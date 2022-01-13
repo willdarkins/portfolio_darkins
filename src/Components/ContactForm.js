@@ -24,7 +24,7 @@ function ContactForm() {
 
     function sendEmail(e) {
         e.preventDefault();
-        emailjs.sendForm('gmail', 'template_etpi9qr', form.current, 'user_8RK90OEwm3kDqQ9S7YnfE')
+        emailjs.sendForm('service_jez5q4f', 'template_etpi9qr', e.target, 'user_8RK90OEwm3kDqQ9S7YnfE')
             .then((result) => {
                 console.log(result.text);
                 alert('Email sent successfully!')
