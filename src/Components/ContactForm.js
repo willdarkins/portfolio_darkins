@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Card, CardContent, Grid, TextField, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
 import styled from 'styled-components';
+import emailjs from '@emailjs/browser';
 
 const ContactCardStyles = styled.div`
     .card{
@@ -21,48 +22,29 @@ const ContactCardStyles = styled.div`
 `
 function ContactForm() {
 
-    const [first, setFirst] = useState('');
-    const [last, setLast] = useState('');
-    const [email, setEmail] = useState('');
-    const [phone, setPhone] = useState('');
-    const [message, setMessage] = useState('');
-
-    const [status, setStatus] = useState("Submit");
-    const handleSubmit = async (e) => {
+    function sendEmail(e) {
         e.preventDefault();
-        setStatus("Sending...");
-
-        let details = {
-            firstname: first,
-            lastname: last,
-            email: email,
-            phone: phone,
-            message: message,
-        };
-
-        let response = await fetch("https://willdarkins.herokuapp.com", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json;charset=utf-8",
-            },
-            body: JSON.stringify(details),
-        });
-        setStatus("Submit");
-        let result = await response.json();
-        alert(result.status);
-    };
+        emailjs.sendForm('gmail', 'template_etpi9qr', form.current, 'user_8RK90OEwm3kDqQ9S7YnfE')
+            .then((result) => {
+                console.log(result.text);
+                alert('Email sent successfully!')
+            }, (error) => {
+                console.log(error.text);
+            });
+            e.target.reset()
+    }
     return (
         <ContactCardStyles>
             <Card style={{ maxWidth: 535, margin: '0 auto' }} className={'card'}>
                 <CardContent>
                     <Typography gutterBottom variant='h5'>Reach out and say hello!</Typography>
                     <Typography gutterBottom variant='body2' color='textsecondary' component='p'>I'll respond ASAP to questions and work inquires</Typography>
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={sendEmail}>
                         <Grid container spacing={2}>
-                        <Grid xs={12} item></Grid>
+                            <Grid xs={12} item></Grid>
                             <Grid xs={12} sm={6} item>
                                 <TextField
-                                    onChange={(e) => setFirst(e.target.value)}
+                                    // onChange={(e) => setFirst(e.target.value)}
                                     InputLabelProps={{ style: { color: 'var(--font-dark)' }, }}
                                     type='text'
                                     label='First Name'
@@ -70,11 +52,12 @@ function ContactForm() {
                                     variant='outlined'
                                     fullWidth
                                     required
-                                    htmlFor='firstname' />
+                                    htmlFor='firstname'
+                                    name='FirstName' />
                             </Grid>
                             <Grid xs={12} sm={6} item>
                                 <TextField
-                                    onChange={(e) => setLast(e.target.value)}
+                                    // onChange={(e) => setLast(e.target.value)}
                                     InputLabelProps={{ style: { color: 'var(--font-dark)' }, }}
                                     type='text'
                                     label='Last Name'
@@ -82,11 +65,12 @@ function ContactForm() {
                                     variant='outlined'
                                     fullWidth
                                     required
-                                    htmlFor='lastname' />
+                                    htmlFor='lastname'
+                                    name='LastName' />
                             </Grid>
                             <Grid xs={12} item>
                                 <TextField
-                                    onChange={(e) => setEmail(e.target.value)}
+                                    // onChange={(e) => setEmail(e.target.value)}
                                     InputLabelProps={{ style: { color: 'var(--font-dark)' }, }}
                                     type='email'
                                     label='Email'
@@ -94,11 +78,12 @@ function ContactForm() {
                                     variant='outlined'
                                     fullWidth
                                     required
-                                    htmlFor='email' />
+                                    htmlFor='email'
+                                    name='email' />
                             </Grid>
                             <Grid xs={12} item>
                                 <TextField
-                                    onChange={(e) => setPhone(e.target.value)}
+                                    // onChange={(e) => setPhone(e.target.value)}
                                     InputLabelProps={{ style: { color: 'var(--font-dark)' }, }}
                                     type='number'
                                     label='Phone #'
@@ -106,11 +91,12 @@ function ContactForm() {
                                     variant='outlined'
                                     fullWidth
                                     required
-                                    htmlFor='phone' />
+                                    htmlFor='phone'
+                                    name='phone' />
                             </Grid>
                             <Grid xs={12} item>
                                 <TextField
-                                    onChange={(e) => setMessage(e.target.value)}
+                                    // onChange={(e) => setMessage(e.target.value)}
                                     InputLabelProps={{ style: { color: 'var(--font-dark)' }, }}
                                     type='text'
                                     label='Message'
@@ -119,11 +105,12 @@ function ContactForm() {
                                     variant='outlined'
                                     fullWidth
                                     required
-                                    htmlFor='message' />
+                                    htmlFor='message'
+                                    name='message' />
                             </Grid>
                             <Grid xs={12} item>
                                 <Button
-                                    type='submit' color='primary' variant='contained' fullWidth>{status}</Button>
+                                    type='submit' color='primary' variant='contained' fullWidth>Submit</Button>
                             </Grid>
                         </Grid>
                     </form>
