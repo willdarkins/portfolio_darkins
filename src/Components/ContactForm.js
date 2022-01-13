@@ -40,7 +40,7 @@ function ContactForm() {
             message: message,
         };
 
-        let response = await fetch("http://willdarkins.herokuapp.com", {
+        let response = await fetch("https://willdarkins.herokuapp.com", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json;charset=utf-8",
