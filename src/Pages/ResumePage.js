@@ -20,7 +20,7 @@ function ResumePage() {
                     }
                 },
             }}>
-                <SkillBars />
+                {/* <SkillBars /> */}
                 <Resume />
             </motion.div>
         </MainLayout>
