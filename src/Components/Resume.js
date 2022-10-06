@@ -31,7 +31,13 @@ function Resume() {
                 </div>
                 <div className='resume-content'>
                     <ResumeItem
-                        year={'FEB 2018 - PRESENT'}
+                        year={'APR 2022 - PRESENT'}
+                        title={'Product Support Specialist - AdCellerant'}
+                        subTitle={'University of Oregon - via Trilogy Education Services'}
+                        text={'Providing top level support and troubleshooting to clients and developers using proprietary digital media and analytics software.'}
+                    />
+                    <ResumeItem
+                        year={'FEB 2018 - APR 2022'}
                         title={'Digital Content Manager - Audacy Portland'}
                         subTitle={'University of Oregon - via Trilogy Education Services'}
                         text={' Directed digital content creation for 7 radio stations, working to capture brand image and increase audience engagement each week.'}
