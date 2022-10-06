@@ -92,7 +92,7 @@ function Nav() {
                     </motion.li>
             </ul>
         <footer className='footer'>
-        <p>Will Darkins - 2021</p>
+        <p>Will Darkins - 2022</p>
         </footer>
         </NavStyles>
     )
